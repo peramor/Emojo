@@ -1,0 +1,4 @@
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.pdb

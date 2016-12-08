@@ -1,22 +1,22 @@
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\InstagramTest.exe.config
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\InstagramTest.exe
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\InstagramTest.pdb
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\crypto.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\InstaSharp.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\Microsoft.ProjectOxford.Common.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\Newtonsoft.Json.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\System.Net.Http.Extensions.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\System.Net.Http.Primitives.dll
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\crypto.pdb
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\crypto.xml
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\Newtonsoft.Json.xml
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\System.Net.Http.Extensions.xml
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\bin\Debug\System.Net.Http.Primitives.xml
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.csproj.App.config
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.csprojResolveAssemblyReference.cache
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.Form1.resources
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.Properties.Resources.resources
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.csproj.GenerateResource.Cache
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.exe
-c:\users\rbt1\documents\visual studio 2015\Projects\InstagramTest\InstagramTest\obj\Debug\InstagramTest.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\InstagramTest.exe.config
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\InstagramTest.exe
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\InstagramTest.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\crypto.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\InstaSharp.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\Microsoft.ProjectOxford.Common.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\crypto.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\crypto.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.csproj.App.config
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.csprojResolveAssemblyReference.cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.Form1.resources
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.Properties.Resources.resources
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.csproj.GenerateResource.Cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.exe
+C:\Users\Roman\Desktop\team_project\emojo\emojo\InstagramTest\obj\Debug\InstagramTest.pdb

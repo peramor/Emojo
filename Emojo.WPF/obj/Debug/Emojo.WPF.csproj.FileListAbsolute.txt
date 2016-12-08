@@ -1,0 +1,14 @@
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\App.g.cs
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\MainWindow.baml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
