@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.25928.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.Lib", "Emojo.Lib\Emojo.Lib.csproj", "{0186B950-E628-4A88-A9AA-70F69FAC250E}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.Droid", "Emojo.Droid\Emojo.Droid.csproj", "{014CABF9-523F-40B6-9E23-A8CD89295588}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramTest", "InstagramTest\InstagramTest.csproj", "{8BB4D19D-361C-4250-8BC0-899A0A938FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.Database", "..\..\..\Documents\Visual Studio 2015\Projects\Emojo.Datebase\Emojo.Datebase\Emojo.Database.csproj", "{64E7DC9F-F2CA-4D28-B75D-AB0E3F847FDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E7DC9F-F2CA-4D28-B75D-AB0E3F847FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E7DC9F-F2CA-4D28-B75D-AB0E3F847FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E7DC9F-F2CA-4D28-B75D-AB0E3F847FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E7DC9F-F2CA-4D28-B75D-AB0E3F847FDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
