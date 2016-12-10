@@ -14,3 +14,9 @@ C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.dll
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.pdb
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.Initial.resources
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.csproj.GenerateResource.Cache
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.dll.config
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\EntityFramework.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\EntityFramework.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.csprojResolveAssemblyReference.cache

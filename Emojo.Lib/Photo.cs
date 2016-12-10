@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Emojo.Datebase
 {
-    class Photo
+    public class Photo
     {
         public int Id { get; set; }
         public double Anger { get; set; }

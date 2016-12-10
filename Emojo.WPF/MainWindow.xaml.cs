@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Emojo.Datebase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace Emojo.WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            string login = textBoxLogin.Text;
+
+            using (var db = new Context())
+            {
+                db.Users.Add(new User { Username = login });
+            }
+
+            buttonAdd.Content = "done";
         }
     }
 }

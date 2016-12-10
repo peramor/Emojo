@@ -12,3 +12,9 @@ C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Pr
 C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
 C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
 C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
+C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
