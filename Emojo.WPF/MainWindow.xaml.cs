@@ -33,6 +33,7 @@ namespace Emojo.WPF
             using (var db = new Context())
             {
                 db.Users.Add(new User { Username = login });
+                db.SaveChanges();
             }
 
             buttonAdd.Content = "done";
