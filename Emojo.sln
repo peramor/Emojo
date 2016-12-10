@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.Lib", "Emojo.Lib\Emojo.Lib.csproj", "{0186B950-E628-4A88-A9AA-70F69FAC250E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.WPF", "Emojo.WPF\Emojo.WPF.csproj", "{6DE7C62C-7BE4-4943-8AAD-625443BCB472}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emojo.Droid", "Emojo.Droid\Emojo.Droid.csproj", "{014CABF9-523F-40B6-9E23-A8CD89295588}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramTest", "InstagramTest\InstagramTest.csproj", "{8BB4D19D-361C-4250-8BC0-899A0A938FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{014CABF9-523F-40B6-9E23-A8CD89295588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{014CABF9-523F-40B6-9E23-A8CD89295588}.Release|Any CPU.Build.0 = Release|Any CPU
 		{014CABF9-523F-40B6-9E23-A8CD89295588}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BB4D19D-361C-4250-8BC0-899A0A938FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Emojo.Datebase
+namespace Emojo.Lib
 {
     public class Context : DbContext
     {
         public DbSet<Photo> Photos { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<FollowRelationship> FollowRelationships { get; set; }
         public Context() : base("azuresql")
         {
 

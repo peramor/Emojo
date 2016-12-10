@@ -7,13 +7,13 @@ namespace Emojo.Lib.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class follower_relationships : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(follower_relationships));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612101358439_InitialCreate"; }
+            get { return "201612102122246_follower_relationships"; }
         }
         
         string IMigrationMetadata.Source

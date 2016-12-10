@@ -13,7 +13,7 @@ namespace Emojo.Lib.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612101450262_Initial"; }
+            get { return "201612102115000_Initial"; }
         }
         
         string IMigrationMetadata.Source
