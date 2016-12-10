@@ -51,14 +51,31 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="Photo.cs" />
+    <Compile Include="Migrations\201612101358439_InitialCreate.cs" />
+    <Compile Include="Migrations\201612101358439_InitialCreate.Designer.cs">
+      <DependentUpon>201612101358439_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612101450262_Initial.cs" />
+    <Compile Include="Migrations\201612101450262_Initial.Designer.cs">
+      <DependentUpon>201612101450262_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Entity\Photo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Entity\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612101358439_InitialCreate.resx">
+      <DependentUpon>201612101358439_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612101450262_Initial.resx">
+      <DependentUpon>201612101450262_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
