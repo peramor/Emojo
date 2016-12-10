@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emojo.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        
+        Title="Login" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="47*"/>
@@ -18,8 +19,6 @@
             <ColumnDefinition Width="405*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontSize="24" VerticalAlignment="Center" Margin="10,8,10,7" Height="32">Логин:</TextBlock>
-        <TextBox Name="textBoxLogin" Grid.Column="1" Margin="5" FontSize="24"></TextBox>
-        <Button Name="buttonAdd" Grid.Row="1" Grid.Column="1" Width="80" FontSize="24" Margin="0,5,5,5" HorizontalAlignment="Right" Click="buttonAdd_Click">ADD</Button>
+        <Button Click="LoginButtonClicked">LOGIN</Button>
     </Grid>
 </Window>

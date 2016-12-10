@@ -21,3 +21,16 @@ C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.cs
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.InitialCreate.resources
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.csproj.GenerateResource.Cache
 C:\Users\Михаил\Source\Repos\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.Initial.resources
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.dll.config
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.dll
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\Emojo.Lib.pdb
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\EntityFramework.dll
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\EntityFramework.SqlServer.dll
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\EntityFramework.xml
+\\psf\Home\Desktop\emojo\Emojo.Lib\bin\Debug\EntityFramework.SqlServer.xml
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.csprojResolveAssemblyReference.cache
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.InitialCreate.resources
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.Initial.resources
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.dll
+\\psf\Home\Desktop\emojo\Emojo.Lib\obj\Debug\Emojo.Lib.pdb

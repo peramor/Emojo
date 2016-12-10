@@ -26,17 +26,12 @@ namespace Emojo.WPF
             InitializeComponent();
         }
 
-        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        private void LoginButtonClicked(object sender, RoutedEventArgs e)
         {
-            string login = textBoxLogin.Text;
+            var g = new FinalInfo();
+            g.Show();
 
-            using (var db = new Context())
-            {
-                db.Users.Add(new User { Username = login });
-                db.SaveChanges();
-            }
 
-            buttonAdd.Content = "done";
         }
     }
 }
