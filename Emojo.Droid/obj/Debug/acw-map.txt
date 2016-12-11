@@ -42,6 +42,10 @@ Emojo.Droid.Fragments.Fragment2, Emojo.Droid;md53e765c2078cf2138d7eebacb975f4f32
 Emojo.Droid.Fragments.Fragment2, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53e765c2078cf2138d7eebacb975f4f32.Fragment2
 Emojo.Droid.Fragments.Fragment2;md53e765c2078cf2138d7eebacb975f4f32.Fragment2
 emojo.droid.fragments.Fragment2;md53e765c2078cf2138d7eebacb975f4f32.Fragment2
+Emojo.Droid.Fragments.ImageAdapter, Emojo.Droid;md53e765c2078cf2138d7eebacb975f4f32.ImageAdapter
+Emojo.Droid.Fragments.ImageAdapter, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53e765c2078cf2138d7eebacb975f4f32.ImageAdapter
+Emojo.Droid.Fragments.ImageAdapter;md53e765c2078cf2138d7eebacb975f4f32.ImageAdapter
+emojo.droid.fragments.ImageAdapter;md53e765c2078cf2138d7eebacb975f4f32.ImageAdapter
 Emojo.Droid.Fragments.Fragment3, Emojo.Droid;md53e765c2078cf2138d7eebacb975f4f32.Fragment3
 Emojo.Droid.Fragments.Fragment3, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53e765c2078cf2138d7eebacb975f4f32.Fragment3
 Emojo.Droid.Fragments.Fragment3;md53e765c2078cf2138d7eebacb975f4f32.Fragment3

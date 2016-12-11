@@ -46,6 +46,8 @@ namespace Emojo.Droid
                 {
                     var loggedInAccount = eventArgs.Account;
                     AccountStore.Create(this).Save(loggedInAccount, "Instagram");
+                    Intent intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
                 }
             };
 
