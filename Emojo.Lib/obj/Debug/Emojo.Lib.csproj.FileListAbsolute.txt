@@ -24,3 +24,4 @@ C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.dll
 C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.pdb
 C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.Initial.resources
 C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.SurrogatekeyonUser.resources
+C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.Lib\obj\Debug\Emojo.Lib.Migrations.FollowerRelationshipDeleted.resources

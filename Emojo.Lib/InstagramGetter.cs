@@ -72,20 +72,18 @@ namespace Emojo.Lib {
                     }).ToList();
         }
 
-        public async Task<List<FollowRelationship>> GetFollowRelationships() {
+        public async Task<List<User>> GetFollowRelationships() {
             var relationshipsInfo = new InstaSharp.Endpoints.Relationships(config, token);
             var user = await GetUser();
             var follows = await relationshipsInfo.FollowsAll();
             return (from f in follows
-                    select new FollowRelationship {
-                        Follower = user,
-                        Followed = new User {
-                            UserId = f.Id,
-                            Username = f.Username,
-                            FullName = f.FullName,
-                            ProfilePhoto = f.ProfilePicture
-                        }
-                    }).ToList();
+                    select new User {
+                        UserId = f.Id,
+                        Username = f.Username,
+                        FullName = f.FullName,
+                        ProfilePhoto = f.ProfilePicture
+                    }
+                    ).ToList();
         }
 
     }

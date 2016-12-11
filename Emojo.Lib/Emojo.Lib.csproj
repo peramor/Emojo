@@ -83,7 +83,6 @@
     <Compile Include="APIModels\InstagramPhoto.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="EmotionsAPIGetter.cs" />
-    <Compile Include="Entity\FollowRelationship.cs" />
     <Compile Include="InstagramGetter.cs" />
     <Compile Include="Entity\Photo.cs" />
     <Compile Include="Migrations\201612111227521_Initial.cs" />
@@ -93,6 +92,10 @@
     <Compile Include="Migrations\201612111243515_Surrogate key on User.cs" />
     <Compile Include="Migrations\201612111243515_Surrogate key on User.Designer.cs">
       <DependentUpon>201612111243515_Surrogate key on User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612111604147_FollowerRelationshipDeleted.cs" />
+    <Compile Include="Migrations\201612111604147_FollowerRelationshipDeleted.Designer.cs">
+      <DependentUpon>201612111604147_FollowerRelationshipDeleted.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612111243515_Surrogate key on User.resx">
       <DependentUpon>201612111243515_Surrogate key on User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612111604147_FollowerRelationshipDeleted.resx">
+      <DependentUpon>201612111604147_FollowerRelationshipDeleted.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

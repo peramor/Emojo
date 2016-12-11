@@ -11,7 +11,6 @@ namespace Emojo.Lib
     {
         public DbSet<Photo> Photos { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<FollowRelationship> FollowRelationships { get; set; }
         public Context() : base("azuresql")
         {
 
