@@ -7,7 +7,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="EMOJO" MinHeight="642.96" MinWidth="785.774" FontFamily="Segoe UI Semibold" ResizeMode="CanResizeWithGrip" Background="White" >
-    <Grid>
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="281*" />
             <ColumnDefinition Width="52*"/>
@@ -190,6 +190,10 @@
         <StackPanel Grid.Column="3">
             <TextBlock HorizontalAlignment="Center" FontSize="24" FontFamily="Comic Sans MS" Margin="0 10 0 0">100</TextBlock>
             <TextBlock HorizontalAlignment="Center" Foreground="#FFBDAFAF" FontSize="16" FontFamily="MV Boli">following</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="4" Margin="0 0 0 20">
+            <TextBlock HorizontalAlignment="Center" Margin="0 10 0 5" FontSize="16" FontFamily="MV Boli" Foreground="#FF9F9F90">Chosen picture</TextBlock>
+            <Image Name="ChosenPic" HorizontalAlignment="Center" Source="6F6A2355.JPG" Margin="10 5 10 30"></Image>
         </StackPanel>
 
     </Grid>

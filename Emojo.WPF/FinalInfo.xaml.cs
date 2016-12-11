@@ -34,13 +34,20 @@ namespace Emojo.WPF
 
         private void ButtonClickOk(object sender, RoutedEventArgs e)
         {
-          Image Box = new Image();
-            Box.Source= (new BitmapImage(new Uri(@"\\psf\Home\Desktop\A.JPG")));
+            var uri = new Uri("https://scontent-arn2-1.cdninstagram.com/t51.2885-19/s150x150/15099481_273386176397163_8805222941563289600_a.jpg");
+
+            Image Box = new Image();
+            Box.Source = new BitmapImage(uri);
             gridPics.Children.Add(Box);
-           Grid.SetRow(Box, 1);
-           Grid.SetColumn(Box, 1);
-           ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri(@"\\psf\Home\Desktop\A.JPG")));
+            Grid.SetRow(Box, 1);
+            Grid.SetColumn(Box, 1);
+            Box.MouseEnter += (s, a) => ChosenPic.Source = new BitmapImage(uri);
+            
+
+
+            ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri(@"\\psf\Home\Desktop\A.JPG")));
         }
+
         
     }
 }
