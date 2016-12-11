@@ -51,5 +51,23 @@ namespace Emojo.Lib {
             }
             return finalPhotos;
         }
+
+        public async Task<List<int>> GetCountPerentages(List<APIModels.InstagramPhoto> photos) {
+            int countWithout = 0;
+            int countAlone = 0;
+            int countMany = 0;
+            foreach (var photo in photos) {
+                var emotions = await recognizer.RecognizeAsync(photo.LinkStandard);
+                if (emotions.Length == 0) {
+                    countWithout++;
+                } else if (emotions.Length == 1) {
+                    countAlone++;
+                } else {
+                    countMany++;
+                }
+            }
+            return new List<int> { countWithout, countAlone, countMany };
+        }
+
     }
 }
