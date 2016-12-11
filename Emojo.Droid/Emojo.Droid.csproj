@@ -94,6 +94,7 @@
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Helpers\Account.cs" />
     <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +130,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Activity_BottomSheet.axml">
       <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>

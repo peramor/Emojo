@@ -14,6 +14,10 @@ Emojo.Droid.AccountDetailActivity, Emojo.Droid;md544f10bfb2cf098cede19f3974831ef
 Emojo.Droid.AccountDetailActivity, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md544f10bfb2cf098cede19f3974831efd2.AccountDetailActivity
 Emojo.Droid.AccountDetailActivity;md544f10bfb2cf098cede19f3974831efd2.AccountDetailActivity
 emojo.droid.AccountDetailActivity;md544f10bfb2cf098cede19f3974831efd2.AccountDetailActivity
+Emojo.Droid.LoginActivity, Emojo.Droid;md544f10bfb2cf098cede19f3974831efd2.LoginActivity
+Emojo.Droid.LoginActivity, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md544f10bfb2cf098cede19f3974831efd2.LoginActivity
+Emojo.Droid.LoginActivity;md544f10bfb2cf098cede19f3974831efd2.LoginActivity
+emojo.droid.LoginActivity;md544f10bfb2cf098cede19f3974831efd2.LoginActivity
 Emojo.Droid.MainActivity, Emojo.Droid;md544f10bfb2cf098cede19f3974831efd2.MainActivity
 Emojo.Droid.MainActivity, Emojo.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md544f10bfb2cf098cede19f3974831efd2.MainActivity
 Emojo.Droid.MainActivity;md544f10bfb2cf098cede19f3974831efd2.MainActivity
