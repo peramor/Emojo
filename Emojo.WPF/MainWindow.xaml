@@ -6,19 +6,34 @@
         xmlns:local="clr-namespace:Emojo.WPF"
         mc:Ignorable="d"
         
-        Title="Login" Height="350" Width="525">
+        Title="Emogo LOGIN" Height="212.5" Width="546.875">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="47*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="164*"/>
+            <RowDefinition />
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="112*"/>
-            <ColumnDefinition Width="405*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                <GradientStop Color="#FF754BBF" Offset="0"/>
+                <GradientStop Color="#FFBE388C" Offset="0.25"/>
+                <GradientStop Color="#FFE63E61" Offset="0.50"/>
+                <GradientStop Color="#FFF46D3D" Offset="0.75"/>
+                <GradientStop Color="#FFFDBD59" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
-        <Button Click="LoginButtonClicked">LOGIN</Button>
+        <Button Grid.Row="1" Click="LoginButtonClicked" Margin="171,10,171,23" FontFamily="Cambria Math" FontSize="18"  >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="1,1">
+                    <GradientStop Color="#FF754BBF" Offset="0"/>
+                    <GradientStop Color="#FFBE388C" Offset="0.25"/>
+                    <GradientStop Color="#FFE63E61" Offset="0.50"/>
+                    <GradientStop Color="#FFF46D3D" Offset="0.75"/>
+                    <GradientStop Color="#FFFDBD59" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+            LOGIN
+        </Button>
     </Grid>
 </Window>
