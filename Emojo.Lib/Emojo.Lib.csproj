@@ -86,17 +86,13 @@
     <Compile Include="Entity\FollowRelationship.cs" />
     <Compile Include="InstagramGetter.cs" />
     <Compile Include="Entity\Photo.cs" />
-    <Compile Include="Migrations\201612102115000_Initial.cs" />
-    <Compile Include="Migrations\201612102115000_Initial.Designer.cs">
-      <DependentUpon>201612102115000_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201612111227521_Initial.cs" />
+    <Compile Include="Migrations\201612111227521_Initial.Designer.cs">
+      <DependentUpon>201612111227521_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612102122246_follower_relationships.cs" />
-    <Compile Include="Migrations\201612102122246_follower_relationships.Designer.cs">
-      <DependentUpon>201612102122246_follower_relationships.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201612102128377_Set non-nullable columns.cs" />
-    <Compile Include="Migrations\201612102128377_Set non-nullable columns.Designer.cs">
-      <DependentUpon>201612102128377_Set non-nullable columns.cs</DependentUpon>
+    <Compile Include="Migrations\201612111243515_Surrogate key on User.cs" />
+    <Compile Include="Migrations\201612111243515_Surrogate key on User.Designer.cs">
+      <DependentUpon>201612111243515_Surrogate key on User.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +102,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository.cs" />
     <Compile Include="ViewModels\OAuthBuildModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,14 +110,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612102115000_Initial.resx">
-      <DependentUpon>201612102115000_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612111227521_Initial.resx">
+      <DependentUpon>201612111227521_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612102122246_follower_relationships.resx">
-      <DependentUpon>201612102122246_follower_relationships.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612102128377_Set non-nullable columns.resx">
-      <DependentUpon>201612102128377_Set non-nullable columns.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612111243515_Surrogate key on User.resx">
+      <DependentUpon>201612111243515_Surrogate key on User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

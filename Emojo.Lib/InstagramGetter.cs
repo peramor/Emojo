@@ -11,7 +11,7 @@ namespace Emojo.Lib {
     public class InstagramGetter {
         private InstagramConfig config;
         private OAuth oauth;
-        InstaSharp.Models.Responses.OAuthResponse token;
+        public InstaSharp.Models.Responses.OAuthResponse token;
 
 
         public InstagramGetter() {
