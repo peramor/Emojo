@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using InstaSharp;
 using System.Diagnostics;
+using Emojo.Lib.ViewModels;
 
 namespace Emojo.Lib {
     public class InstagramGetter {
@@ -30,8 +31,19 @@ namespace Emojo.Lib {
                 token = await oauth.RequestToken(code);
             } catch {
                 throw new OperationCanceledException("Wasn't able to authenticate.");
-            }
-            
+            }            
+        }
+
+        public void BuildToken(OAuthBuildModel model) {
+            token = new InstaSharp.Models.Responses.OAuthResponse {
+                AccessToken = model.AccessToken,
+                User = new InstaSharp.Models.UserInfo {
+                    Id = model.Id,
+                    Username = model.Username,
+                    FullName = model.FullName,
+                    ProfilePicture = model.ProfilePicture
+                }
+            };
         }
 
         public async Task<User> GetUser() {

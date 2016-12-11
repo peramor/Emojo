@@ -26,6 +26,8 @@ namespace Emojo.WPF
     {
         InstagramGetter getter = new InstagramGetter();
 
+        //1694146539.41bb294.879c4e88a59d44dd960a0b32d2a64edf
+
         public MainWindow()
         {
             InitializeComponent();
@@ -45,12 +47,12 @@ namespace Emojo.WPF
             var context = await listener.GetContextAsync();
             var code = context.Request.RawUrl.Substring(context.Request.RawUrl.IndexOf("code=") + 5);
             getter.GetToken(code);
+            //getter.BuildToken("1694146539.41bb294.879c4e88a59d44dd960a0b32d2a64edf", 1694146539, "roman_malts","", "https://instagram.ftpe4-2.fna.fbcdn.net/t51.2885-19/11906329_960233084022564_1448528159_a.jpg");
             UnlockAll();
         }
 
 
         private async void button1_Click(object sender, RoutedEventArgs e) {
-
             var user = await getter.GetUser();           
         }
     }
