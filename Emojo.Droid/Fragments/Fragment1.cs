@@ -152,6 +152,7 @@ namespace Emojo.Droid.Fragments
                     else
                         mImageView.SetImageResource(Resource.Drawable.face_1);
                     choosed = !choosed;
+                    //using (Emojo. db = new Context())
                 };
 
                 mTxtView = view.FindViewById<TextView>(Resource.Id.text1);
