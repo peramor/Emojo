@@ -51,9 +51,7 @@ namespace Emojo.WPF
 
         private async void button1_Click(object sender, RoutedEventArgs e) {
 
-            var media = await getter.GetRecentMedia();
-            EmotionsAPIGetter emgetter = new EmotionsAPIGetter();
-            var markedMedia = await emgetter.GetEmotionRatings(media);        
+            var user = await getter.GetUser();           
         }
     }
 }
