@@ -2,10 +2,10 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\MPAndroidChart\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\PCLCrypto\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\Refractored.Controls.CircleImageView\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\Xamarin.Auth\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\MPAndroidChart\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\PCLCrypto\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\Refractored.Controls.CircleImageView\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\Xamarin.Auth\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\MPAndroidChart\library_project_imports\assets</ResolvedAssetDirectory>
@@ -15,9 +15,9 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\MPAndroidChart.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\PCLCrypto.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\Refractored.Controls.CircleImageView.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.Droid\obj\Debug\__library_projects__\Xamarin.Auth.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\MPAndroidChart.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\PCLCrypto.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\Refractored.Controls.CircleImageView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.Droid\obj\Debug\__library_projects__\Xamarin.Auth.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

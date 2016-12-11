@@ -12,6 +12,7 @@ using Android.Widget;
 using InstaSharp;
 using System.Threading.Tasks;
 using Xamarin.Auth;
+using System.Net.Http;
 
 namespace Emojo.Droid
 {
@@ -28,16 +29,15 @@ namespace Emojo.Droid
         }
 
         private const string client_id = "4b929f89088547acb455273d73fe2184";
-        private const string client_secret = "71f0fc7d1c434fb89ef815bc072e55bc";
+        private const string client_secret = "c9f9379d17e54c39a441cc9fc9327a96";
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-
             var auth = new OAuth2Authenticator(client_id
                                               , client_secret
                                               , "basic follower_list"
                                               , new Uri("https://api.instagram.com/oauth/authorize/")
-                                              , new Uri("https://emojo.azurewebsites.new/auth")
+                                              , new Uri($"https://emojo.azurewebsites.net/auth?client={client_id}&secret={client_secret}")
                                               , new Uri("https://api.instagram.com/oauth/access_token"));
 
             auth.Completed += (s, eventArgs) =>
