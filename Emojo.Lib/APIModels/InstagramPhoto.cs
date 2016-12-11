@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Emojo.Lib.APIModels {
-    class InstagramPhoto {
+    public class InstagramPhoto {
         public string PhotoId { get; set; }
         public string LinkStandard { get; set; }
         public string LinkLow { get; set; }

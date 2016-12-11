@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Emojo.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid Margin="0,0,-8,-1">
         <Grid.RowDefinitions>
             <RowDefinition Height="47*"/>
             <RowDefinition Height="53*"/>
@@ -14,12 +14,13 @@
             <RowDefinition Height="164*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="112*"/>
-            <ColumnDefinition Width="405*"/>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="274*"/>
         </Grid.ColumnDefinitions>
-
-        <TextBlock FontSize="24" VerticalAlignment="Center" Margin="10,8,10,7" Height="32">Логин:</TextBlock>
-        <TextBox Name="textBoxLogin" Grid.Column="1" Margin="5" FontSize="24"></TextBox>
-        <Button Name="buttonAdd" Grid.Row="1" Grid.Column="1" Width="80" FontSize="24" Margin="0,5,5,5" HorizontalAlignment="Right" Click="buttonAdd_Click">ADD</Button>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Margin="27,17,0,0" VerticalAlignment="Top" Width="85" Height="30" Click="button_Click"/>
+        <Label x:Name="label" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="52,21,0,0" VerticalAlignment="Top" Width="194" Grid.ColumnSpan="2"/>
+        <Button x:Name="button1" Content="Get Full Name" HorizontalAlignment="Left" Margin="27,23,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Click="button1_Click"/>
+        <WebBrowser x:Name="browser" Grid.Column="1" HorizontalAlignment="Left" Height="240" Margin="52,23,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="349" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
