@@ -17,7 +17,7 @@ using Emojo.Droid.Fragments;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Emojo", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/Theme.DesignDemo")]
+    [Activity(Label = "Emojo", Icon = "@drawable/icon", Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : AppCompatActivity
     {
         private DrawerLayout mDrawerLayout;
