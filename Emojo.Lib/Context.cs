@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Emojo.Datebase
+namespace Emojo.Lib
 {
     public class Context : DbContext
     {

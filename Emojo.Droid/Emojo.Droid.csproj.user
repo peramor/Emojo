@@ -3,5 +3,6 @@
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <ProjectView>ProjectFiles</ProjectView>
+    <SelectedDevice>Phone_x86_ToolsForApacheCordova</SelectedDevice>
   </PropertyGroup>
 </Project>
