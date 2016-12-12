@@ -1,5 +1,7 @@
+using Android.Content.Res;
 using Android.OS;
 using Android.Views;
+using Android.Widget;
 using MikePhil.Charting.Charts;
 using MikePhil.Charting.Data;
 using MikePhil.Charting.Util;
@@ -21,27 +23,38 @@ namespace Emojo.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            //View view = inflater.Inflate(Resource.Layout.Fragment3, container, false);
+            View view = inflater.Inflate(Resource.Layout.Fragment3, container, false);
+            PieChart pie = view.FindViewById<PieChart>(Resource.Id.pieChart1);
 
-            BarChart chart = new BarChart(Context)
-            {
-                Description = new MikePhil.Charting.Components.Description() { Text = "Sample Description"}
-            };
             Random gen = new Random();
-            List<BarEntry> entries = new List<BarEntry>();
-            entries.Add(new BarEntry(0, gen.Next(0,10), "January"));
-            entries.Add(new BarEntry(1, gen.Next(0, 10), "February"));
-            entries.Add(new BarEntry(2, gen.Next(0, 10), "March"));
-            entries.Add(new BarEntry(3, gen.Next(0, 10), "April"));
-            entries.Add(new BarEntry(4, gen.Next(0, 10), "May"));
-            entries.Add(new BarEntry(5, gen.Next(0, 10), "June"));
-            entries.Add(new BarEntry(6, gen.Next(0, 10), "Jule"));
-            BarDataSet dataSet = new BarDataSet(entries, "# of calls");
 
-            BarData data = new BarData(dataSet);
-            chart.Data = data;
+            pie.Description = new MikePhil.Charting.Components.Description() { Text = "Emotions" };
+            pie.ScrollBarStyle = ScrollbarStyles.OutsideOverlay;
 
-            return chart;
+            pie.SetUsePercentValues(true);
+            pie.HoleRadius = 7;
+
+            int[] colors = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                colors[i] = ColorTemplate.JoyfulColors[i];
+            }
+
+            List<PieEntry> pieEntries = new List<PieEntry>
+            {
+                new PieEntry(gen.Next(0, 100), "happy"),
+                new PieEntry(gen.Next(0, 100), "Sad"),
+                new PieEntry(gen.Next(0, 100), "Fear"),
+                new PieEntry(gen.Next(0, 100), "Angry"),
+                new PieEntry(gen.Next(0, 100), "Surprise"),
+            };
+
+            PieDataSet dataset = new PieDataSet(pieEntries, "emotions");
+            dataset.SetColors(colors);
+            PieData pieData = new PieData(dataset);
+            pie.Data = pieData;
+
+            return view;
         }
     }
 }

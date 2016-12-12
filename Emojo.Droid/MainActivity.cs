@@ -17,7 +17,8 @@ using Emojo.Droid.Fragments;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Emojo", Icon = "@drawable/icon", Theme = "@style/Theme.DesignDemo")]
+    [Activity(Label = "Emojo", MainLauncher = true,
+        Icon = "@drawable/icon", Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : AppCompatActivity
     {
         private DrawerLayout mDrawerLayout;
@@ -66,7 +67,7 @@ namespace Emojo.Droid
             TabAdapter adapter = new TabAdapter(SupportFragmentManager);
             adapter.AddFragment(new Fragment1(), "Collage");
             adapter.AddFragment(new Fragment3(), "Emotions");
-            //adapter.AddFragment(new Fragment3(), "Collage");
+            adapter.AddFragment(new Fragment2(), "My photos");
 
             viewPager.Adapter = adapter;
         }
