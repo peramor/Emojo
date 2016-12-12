@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidGetter.cs" />
     <Compile Include="APIModels\InstagramPhoto.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="EmotionsAPIGetter.cs" />
