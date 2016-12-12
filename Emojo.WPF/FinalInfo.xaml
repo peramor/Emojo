@@ -1,0 +1,124 @@
+﻿<Window x:Class="Emojo.WPF.FinalInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Emojo.WPF"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="EMOJO" MinHeight="642.96" MinWidth="785.774" FontFamily="Segoe UI Semibold" ResizeMode="CanResizeWithGrip" Background="White" >
+    <Window.Resources>
+        <Color x:Key="Color1">#FFC397F7</Color>
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="281*" />
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="222*"/>
+            <ColumnDefinition Width="223*"/>
+
+
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Click="ButtonClickOk">OK</Button>
+
+        <StackPanel Orientation="Horizontal">
+            <Ellipse Name="ProfilePic" Stretch="Uniform" Width="80" Margin="10,10,0,0" HorizontalAlignment="Left">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="6F6A2355.JPG"></ImageBrush>
+                </Ellipse.Fill>
+
+            </Ellipse>
+            <TextBlock Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF7547BD" >Janekegs</TextBlock>
+
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Margin="122,0,121,0" Foreground="#FFD92B70" >Overall Info</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3">
+            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FFF56737" >Choose a picture to analyze</TextBlock>
+        </StackPanel>
+
+        <lvc:PieChart Grid.Row="2" Grid.Column="2" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall}">
+            
+
+        </lvc:PieChart>
+
+        <lvc:PieChart Grid.Row="2" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall_People}">
+            
+        </lvc:PieChart>
+        <lvc:PieChart Grid.Row="4" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 15" Series="{Binding ChosenPicture}">
+            
+        </lvc:PieChart>
+
+        <ScrollViewer Grid.Row="1" Grid.RowSpan="4" CanContentScroll="True" Margin="10 20 10 30" Grid.ColumnSpan="2">
+            <Grid Name="gridPics">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                    <RowDefinition MinHeight="60"/>
+                </Grid.RowDefinitions>
+                <Image Source="6F6A2355.JPG" />
+                <Image Grid.Row="1" Source="6F6A2355.JPG" />
+                <Image Grid.Row="2" Source="6F6A2355.JPG" />
+                <Image Grid.Row="3" Source="6F6A2355.JPG" />
+                <Image Grid.Row="4" Source="6F6A2355.JPG" />
+                <Image Grid.Row="5" Source="6F6A2355.JPG" />
+                <Image Grid.Row="6" Source="6F6A2355.JPG" />
+
+                <Image Grid.Column="1" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="1" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="2" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="3" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="4" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="5" Source="6F6A2355.JPG" />
+                <Image Grid.Column="1" Grid.Row="6" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="1" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="2" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="3" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="4" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="5" Source="6F6A2355.JPG" />
+                <Image Grid.Column="2" Grid.Row="6" Source="6F6A2355.JPG" />
+
+
+            </Grid>
+
+
+        </ScrollViewer>
+        <StackPanel Grid.Column="2" Margin="0 10 ">
+            <TextBlock HorizontalAlignment="Center" FontSize="26" FontFamily="Comic Sans MS" Margin="0 10 0 0 " Foreground="#FF7547BD">100</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="#FFBA3A91" FontSize="16" FontFamily="MV Boli">followers</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Margin="0 10 ">
+            <TextBlock HorizontalAlignment="Center" FontSize="26" FontFamily="Comic Sans MS" Margin="0 10 0 0" Foreground="#FF7547BD">100</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="#FFBA3A91" FontSize="16" FontFamily="MV Boli">following</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="4" Margin="0 0 0 20">
+            
+            <Image Name="ChosenPic" HorizontalAlignment="Center" Source="6F6A2355.JPG" Margin="20 20 20 30"></Image>
+        </StackPanel>
+
+    </Grid>
+</Window>
