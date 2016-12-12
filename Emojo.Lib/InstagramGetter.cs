@@ -46,19 +46,20 @@ namespace Emojo.Lib {
             };
         }
 
-        public User GetUser() {
-            var user = token.User;
+        public async Task<User> GetUser() {
+            var userInfo = new InstaSharp.Endpoints.Users(config, token);
+            var user = await userInfo.GetSelf();
             return new User {
-                UserId = user.Id,
-                Username = user.Username,
-                FullName = user.FullName,
-                ProfilePhoto = user.ProfilePicture
+                UserId = user.Data.Id,
+                Username = user.Data.Username,
+                FullName = user.Data.FullName,
+                ProfilePhoto = user.Data.ProfilePicture
             };
         }
 
         public async Task<List<APIModels.InstagramPhoto>> GetRecentMedia() {
             var userInfo = new InstaSharp.Endpoints.Users(config, token);
-            var user = GetUser();
+            var user = await GetUser();
             var mediaInfo = await userInfo.RecentSelf();
             return (from m in mediaInfo.Data
                     where m.Type == "image"
@@ -73,7 +74,7 @@ namespace Emojo.Lib {
 
         public async Task<List<User>> GetFollowRelationships() {
             var relationshipsInfo = new InstaSharp.Endpoints.Relationships(config, token);
-            var user = GetUser();
+            var user = await GetUser();
             var follows = await relationshipsInfo.FollowsAll();
             return (from f in follows
                     select new User {
