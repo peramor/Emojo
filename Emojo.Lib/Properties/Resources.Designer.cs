@@ -79,6 +79,15 @@ namespace Emojo.Lib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to qwertyuiop.
+        /// </summary>
+        internal static string AppId {
+            get {
+                return ResourceManager.GetString("AppId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to a0929f423c3f4c29af4d0271bd73a205.
         /// </summary>
         internal static string EmotionSubscriptionKey {

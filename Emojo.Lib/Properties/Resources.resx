@@ -123,6 +123,9 @@
   <data name="APISecret" xml:space="preserve">
     <value>b9edde48cbe24132819414d1919d433c</value>
   </data>
+  <data name="AppId" xml:space="preserve">
+    <value>qwertyuiop</value>
+  </data>
   <data name="EmotionSubscriptionKey" xml:space="preserve">
     <value>a0929f423c3f4c29af4d0271bd73a205</value>
   </data>

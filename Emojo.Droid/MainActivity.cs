@@ -14,6 +14,7 @@ using Android.Support.V4.App;
 using System.Collections.Generic;
 using Java.Lang;
 using Emojo.Droid.Fragments;
+using Emojo.Lib;
 
 namespace Emojo.Droid
 {
@@ -22,6 +23,7 @@ namespace Emojo.Droid
     public class MainActivity : AppCompatActivity
     {
         private DrawerLayout mDrawerLayout;
+        List<string> photoLinks = new List<string>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -29,6 +31,8 @@ namespace Emojo.Droid
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            photoLinks.AddRange(Intent.GetStringArrayExtra("photos"));
 
             SupportToolbar toolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(toolBar);
@@ -67,7 +71,7 @@ namespace Emojo.Droid
             TabAdapter adapter = new TabAdapter(SupportFragmentManager);
             adapter.AddFragment(new Fragment1(), "Collage");
             adapter.AddFragment(new Fragment3(), "Emotions");
-            adapter.AddFragment(new Fragment2(), "My photos");
+            adapter.AddFragment(new Fragment2(photoLinks), "My photos");
 
             viewPager.Adapter = adapter;
         }

@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Emojo.Lib
 {
-    public class Context : DbContext
+    public class Context
     {
-        public DbSet<Photo> Photos { get; set; }
-        public DbSet<User> Users { get; set; }
-        public Context() : base("azuresql")
-        {
-
-        }
+        public List<Photo> Photos { get; set; }
+        public List<User> Users { get; set; }
     }
 }

@@ -28,18 +28,22 @@ namespace Emojo.Lib {
             for (int i = 0; i < 5; i++) {
                 emotionarr[i] /= sum;
             }
-            return new Photo {
+            // Р: сохоание в бд
+            Photo finalPhoto = new Photo {
                 PhotoId = photo.PhotoId,
                 LinkStandard = photo.LinkStandard,
                 LinkLow = photo.LinkLow,
                 LinkThumbnail = photo.LinkThumbnail,
-                User = photo.User,
+                UserId = photo.User.UserId,
                 Anger = emotionarr[0],
                 Happiness = emotionarr[1],
                 Fear = emotionarr[2],
                 Sadness = emotionarr[3],
                 Surprise = emotionarr[4]
             };
+
+            await DB.InsertPhotoAsync(finalPhoto); 
+            return finalPhoto;
         }
 
         public async Task<List<Photo>> GetEmotionRatings (List<APIModels.InstagramPhoto> photos) {

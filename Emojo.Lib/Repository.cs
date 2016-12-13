@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 namespace Emojo.Lib {
 
     public enum Emotions { Anger, Happiness, Fear, Sadness, Surprise}
-
-    public class Repository : IDisposable {
+    
+    // Р: нужно переписать запросы к бд через апи
+    /*
+    public class Repository {
         Context context;
 
         public Repository() {
             context = new Context();
-        }
+        }        
 
         public Dictionary<Emotions,double> GetEmotionDictionary(long userId) {
             var dict = new Dictionary<Emotions, double>();
@@ -94,9 +96,6 @@ namespace Emojo.Lib {
 
             return dict;
         }
-
-        public void Dispose() {
-            context.Dispose();
-        }
     }
+    */
 }

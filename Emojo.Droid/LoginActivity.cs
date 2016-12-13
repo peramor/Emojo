@@ -13,6 +13,9 @@ using InstaSharp;
 using System.Threading.Tasks;
 using Xamarin.Auth;
 using System.Net.Http;
+using Emojo.Lib;
+using Emojo.Lib.ViewModels;
+using Newtonsoft.Json;
 
 namespace Emojo.Droid
 {
@@ -46,13 +49,44 @@ namespace Emojo.Droid
                 {
                     var loggedInAccount = eventArgs.Account;
                     AccountStore.Create(this).Save(loggedInAccount, "Instagram");
-                    Intent intent = new Intent(this, typeof(MainActivity));
-                    StartActivity(intent);
+                    GoToMainActivity(loggedInAccount);
+                    if (eventArgs.IsAuthenticated) {
+                        auth = null;
+                    };
                 }
             };
 
             var ui = auth.GetUI(this);
             StartActivityForResult(ui, -1);
+        }
+
+        public async void GoToMainActivity(Account account)
+        {
+            AndroidGetter getter = new AndroidGetter();
+            string access_token = account.Properties["access_token"];
+            string userStr = account.Properties["user"];
+            var user = JsonConvert.DeserializeObject<DTO.User>(userStr);
+
+            var photos = await getter.GetRecentPhotosRecognized(new OAuthBuildModel
+            {
+                AccessToken = access_token,
+                FullName = user.FullName,
+                ProfilePicture = user.ProfilePicture,
+                Id = user.Id,
+                Username = user.UserName
+            });
+
+            Intent intent = new Intent(this, typeof(MainActivity));
+
+            var thumbNailPhotos = photos.Select(p => p.LinkThumbnail).ToList();
+            var thumbNailPhotosArr = new string[thumbNailPhotos.Count];
+            for (int i = 0; i < thumbNailPhotosArr.Length; i++)
+            {
+                thumbNailPhotosArr[i] = thumbNailPhotos[i];
+            }
+
+            intent.PutExtra("photos", thumbNailPhotosArr);
+            StartActivity(intent);
         }
     }
 }

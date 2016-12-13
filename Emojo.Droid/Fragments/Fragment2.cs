@@ -8,11 +8,20 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using Android.Content;
 using MikePhil.Charting.Charts;
 using System.Collections.Generic;
+using Android.Graphics;
+using System.Net;
 
 namespace Emojo.Droid.Fragments
 {
     public class Fragment2 : SupportFragment
     {
+        List<string> _photoLinks;
+
+        public Fragment2(List<string> photoLinks)
+        {
+            _photoLinks = photoLinks;
+        }
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,7 +36,7 @@ namespace Emojo.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.Fragment2, container, false);
             gridView = view.FindViewById<GridView>(Resource.Id.gridview);
 
-            gridView.Adapter = new ImageAdapter(this.Context, gridView.Width / 3);
+            gridView.Adapter = new ImageAdapter(this.Context, _photoLinks);
 
 
             gridView.ItemClick += (s, a) => { };
@@ -39,32 +48,17 @@ namespace Emojo.Droid.Fragments
     public class ImageAdapter : BaseAdapter
     {
         Context context;
-        double length;
+        List<string> _source;
 
-        int[] thumbIds = {
-                Resource.Drawable.face_1, Resource.Drawable.face_2,
-                Resource.Drawable.face_3, Resource.Drawable.face_4,
-                Resource.Drawable.face_5, Resource.Drawable.face_1,
-                Resource.Drawable.face_1, Resource.Drawable.face_2,
-                Resource.Drawable.face_3, Resource.Drawable.face_4,
-                Resource.Drawable.face_5, Resource.Drawable.face_1,
-                Resource.Drawable.face_1, Resource.Drawable.face_2,
-                Resource.Drawable.face_3, Resource.Drawable.face_4,
-                Resource.Drawable.face_5, Resource.Drawable.face_1,
-                Resource.Drawable.face_1, Resource.Drawable.face_2,
-                Resource.Drawable.face_3, Resource.Drawable.face_4,
-                Resource.Drawable.face_5, Resource.Drawable.face_1
-            };
-
-        public ImageAdapter(Context c, double length)
+        public ImageAdapter(Context c, List<string> source)
         {
             context = c;
-            this.length = length;
+            _source = source;
         }
 
         public override int Count
         {
-            get { return thumbIds.Length; }
+            get { return _source.Count; }
         }
 
         public override Java.Lang.Object GetItem(int position)
@@ -94,8 +88,28 @@ namespace Emojo.Droid.Fragments
                 imageView = (ImageView)convertView;
             }
 
-            imageView.SetImageResource(thumbIds[position]);
+            var imageBitmap = GetImageBitmapFromUrl(_source[position]);
+            imageView.SetImageBitmap(imageBitmap);
+
             return imageView;
         }
+
+        private Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+
+            return imageBitmap;
+        }
     }
+
+
 }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Emojo.Lib {
-    class AndroidGetter {
+    public class AndroidGetter {
 
         private InstaSharp.Models.Responses.OAuthResponse BuildToken (OAuthBuildModel model) {
             return new InstaSharp.Models.Responses.OAuthResponse {
@@ -26,7 +26,7 @@ namespace Emojo.Lib {
             var token = BuildToken(model);
             var user = new User {
                 UserId = token.User.Id,
-                Username = token.User.Username,
+                UserName = token.User.Username,
                 FullName = token.User.FullName,
                 ProfilePhoto = token.User.ProfilePicture
             };
@@ -42,6 +42,11 @@ namespace Emojo.Lib {
                         User = user
                     }).ToList();
             var emgetter = new EmotionsAPIGetter();
+
+            // R: if user is not in db
+            await DB.InsertUserAsync(user);
+            // R: else return photos from db
+            // R: but make checking on new photos in account
             return await emgetter.GetEmotionRatings(raw_photos);
         }
 

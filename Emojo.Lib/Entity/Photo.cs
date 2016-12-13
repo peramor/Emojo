@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Emojo.Lib
 {
     public class Photo
     {
-        [Key]
         public string PhotoId { get; set; }
         public string LinkStandard { get; set; }
         public string LinkLow { get; set; }
@@ -19,7 +13,6 @@ namespace Emojo.Lib
         public double Happiness { get; set; }
         public double Sadness { get; set; }
         public double Surprise { get; set; }
-        [Required]
-        public virtual User User { get; set; }
+        public long UserId { get; set; }
     }
 }
