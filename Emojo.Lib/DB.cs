@@ -74,7 +74,8 @@ namespace Emojo.Lib
             dict[Emotions.Surprise] = averages.Surprise;
             return dict;
         }
-
+        //DEPRECATED
+        /*
         public static async Task<Dictionary<Emotions, double>> GetEmotionDictionaryAsync(Photo photo) {
             var dict = new Dictionary<Emotions, double>();
             string json_string;
@@ -92,7 +93,7 @@ namespace Emojo.Lib
             dict[Emotions.Surprise] = image.Surprise;
             return dict;
         }
-
+        */
 
         public static async Task<Dictionary<string, List<Emotions>>> GetMaxByEmotionAsync(User user) {
             var dict = new Dictionary<string, List<Emotions>>();
@@ -144,6 +145,16 @@ namespace Emojo.Lib
             }
 
             return dict;
+        }
+
+        public static async Task<Photo> GetPhotoAsync (string photoId) {
+            string json_string;
+            using (var client = new HttpClient()) {
+                var sql = string.Format("SELECT * FROM Photos WHERE PhotoId = \'{0}\'", photoId);
+                var message = await client.GetAsync($"{uri}?sql={sql}&appId={Properties.Resources.AppId}");
+                json_string = await message.Content.ReadAsStringAsync();
+            }
+            return JsonConvert.DeserializeObject<List<Photo>>(json_string).FirstOrDefault();
         }
 
         public static async Task<bool> CheckUserAsync (User user) {

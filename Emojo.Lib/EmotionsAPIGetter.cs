@@ -28,7 +28,6 @@ namespace Emojo.Lib {
             for (int i = 0; i < 5; i++) {
                 emotionarr[i] /= sum;
             }
-            // Р: сохоание в бд
             Photo finalPhoto = new Photo {
                 PhotoId = photo.PhotoId,
                 LinkStandard = photo.LinkStandard,
@@ -41,8 +40,6 @@ namespace Emojo.Lib {
                 Sadness = emotionarr[3],
                 Surprise = emotionarr[4]
             };
-
-            await DB.InsertPhotoAsync(finalPhoto); 
             return finalPhoto;
         }
 

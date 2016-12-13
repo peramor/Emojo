@@ -42,12 +42,23 @@ namespace Emojo.Lib {
                         User = user
                     }).ToList();
             var emgetter = new EmotionsAPIGetter();
+            var photo_list = new List<Photo>();
 
-            // R: if user is not in db
-            await DB.InsertUserAsync(user);
-            // R: else return photos from db
-            // R: but make checking on new photos in account
-            return await emgetter.GetEmotionRatings(raw_photos);
+            if(!await DB.InsertUserAsync(user)) {
+                foreach (var photo in raw_photos) {
+                    var db_photo = await DB.GetPhotoAsync(photo.PhotoId);
+                    if (db_photo == null) {
+                        var recognized_photo = await emgetter.GetEmotionRatings(photo);
+                        photo_list.Add(recognized_photo);
+                        await DB.InsertPhotoAsync(recognized_photo);
+                    } else {
+                        photo_list.Add(db_photo);
+                    }
+                }
+                return photo_list;
+            } else {
+                return await emgetter.GetEmotionRatings(raw_photos);
+            }
         }
 
     }
