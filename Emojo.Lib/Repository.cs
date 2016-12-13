@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Emojo.Lib {
 
     public enum Emotions { Anger, Happiness, Fear, Sadness, Surprise}
     
-    // Р: нужно переписать запросы к бд через апи
-    /*
     public class Repository {
-        Context context;
 
-        public Repository() {
-            context = new Context();
-        }        
-
-        public Dictionary<Emotions,double> GetEmotionDictionary(long userId) {
+        public async Task<Dictionary<Emotions,double>> GetEmotionDictionary(User user) {
             var dict = new Dictionary<Emotions, double>();
-            var averages = (from p in context.Photos
-                            where p.User.UserId == userId
+            string json_string;
+            using (var client = new HttpClient()) {
+                var query = string.Format("SELECT * FROM Photos WHERE userId = {0}",user.UserId);
+                var uri = string.Format("http://emojo.azurewebsites.net/db/query?sql={0}&appId=qwertyuiop", query);
+                var message = await client.GetAsync(uri);
+                json_string = await message.Content.ReadAsStringAsync();
+            }
+            var photos = JsonConvert.DeserializeObject<List<Photo>>(json_string);
+            var averages = (from p in photos
                             group p by 1 into g
                             select new {
                                 Anger = g.Average(x => x.Anger),
@@ -29,6 +31,7 @@ namespace Emojo.Lib {
                                 Sadness = g.Average(x => x.Sadness),
                                 Surprise = g.Average(x => x.Surprise)
                             }).First();
+            //В случае, если фото не найдено (нет фото для данного пользователя в базе), здесь будет брошено исключение
             dict[Emotions.Anger] = averages.Anger;
             dict[Emotions.Fear] = averages.Fear;
             dict[Emotions.Happiness] = averages.Happiness;
@@ -36,12 +39,18 @@ namespace Emojo.Lib {
             dict[Emotions.Surprise] = averages.Surprise;
             return dict;
         }
-
-        public Dictionary<Emotions,double> GetEmotionDictionary(string imageUrl) {
+        
+        public async Task<Dictionary<Emotions,double>> GetEmotionDictionary(Photo photo) {
             var dict = new Dictionary<Emotions, double>();
-            var image = (from p in context.Photos
-                         where p.LinkStandard == imageUrl
-                         select p).First();
+            string json_string;
+            using (var client = new HttpClient()) {
+                var query = string.Format("SELECT * FROM Photos WHERE PhotoId = \'{0}\'", photo.PhotoId);
+                var uri = string.Format("http://emojo.azurewebsites.net/db/query?sql={0}&appId=qwertyuiop", query);
+                var message = await client.GetAsync(uri);
+                json_string = await message.Content.ReadAsStringAsync();
+            }
+            var image = JsonConvert.DeserializeObject<List<Photo>>(json_string).FirstOrDefault();
+            // В случае, если в базе нет такого изображения, здесь должно быть брошено исключение.
             dict[Emotions.Anger] = image.Anger;
             dict[Emotions.Fear] = image.Fear;
             dict[Emotions.Happiness] = image.Happiness;
@@ -49,11 +58,19 @@ namespace Emojo.Lib {
             dict[Emotions.Surprise] = image.Surprise;
             return dict;
         }
-
-        public Dictionary<string,List<Emotions>> GetMaxByEmotion(long userId) {
+        
+        
+        public async Task<Dictionary<string,List<Emotions>>> GetMaxByEmotion(User user) {
             var dict = new Dictionary<string,List<Emotions>>();
-            var photos = (from p in context.Photos
-                         where p.User.UserId == userId
+            string json_string;
+            using (var client = new HttpClient()) {
+                var query = string.Format("SELECT * FROM Photos WHERE userId = {0}", user.UserId);
+                var uri = string.Format("http://emojo.azurewebsites.net/db/query?sql={0}&appId=qwertyuiop", query);
+                var message = await client.GetAsync(uri);
+                json_string = await message.Content.ReadAsStringAsync();
+            }
+            var photos = JsonConvert.DeserializeObject<List<Photo>>(json_string);
+            var best_photos = (from p in photos
                          group p by 1 into g
                          select new {
                              Anger = g.Where(x => x.Anger == g.Max(y => y.Anger)).FirstOrDefault().LinkStandard,
@@ -62,40 +79,40 @@ namespace Emojo.Lib {
                              Sadness = g.Where(x => x.Sadness == g.Max(y => y.Sadness)).FirstOrDefault().LinkStandard,
                              Surprise = g.Where(x => x.Surprise == g.Max(y => y.Surprise)).FirstOrDefault().LinkStandard
                          }).First();
-
-            if (dict.ContainsKey(photos.Anger)) {
-                dict[photos.Anger].Add(Emotions.Anger);
+            //В случае, если фото не найдено (нет фото для данного пользователя в базе), здесь будет брошено исключение
+            if (dict.ContainsKey(best_photos.Anger)) {
+                dict[best_photos.Anger].Add(Emotions.Anger);
             }
             else {
-                dict[photos.Anger] = new List<Emotions> { Emotions.Anger };
+                dict[best_photos.Anger] = new List<Emotions> { Emotions.Anger };
             }
 
-            if (dict.ContainsKey(photos.Fear)) {
-                dict[photos.Fear].Add(Emotions.Fear);
+            if (dict.ContainsKey(best_photos.Fear)) {
+                dict[best_photos.Fear].Add(Emotions.Fear);
             } else {
-                dict[photos.Fear] = new List<Emotions> { Emotions.Fear };
+                dict[best_photos.Fear] = new List<Emotions> { Emotions.Fear };
             }
 
-            if (dict.ContainsKey(photos.Happiness)) {
-                dict[photos.Happiness].Add(Emotions.Happiness);
+            if (dict.ContainsKey(best_photos.Happiness)) {
+                dict[best_photos.Happiness].Add(Emotions.Happiness);
             } else {
-                dict[photos.Happiness] = new List<Emotions> { Emotions.Happiness };
+                dict[best_photos.Happiness] = new List<Emotions> { Emotions.Happiness };
             }
 
-            if (dict.ContainsKey(photos.Sadness)) {
-                dict[photos.Sadness].Add(Emotions.Sadness);
+            if (dict.ContainsKey(best_photos.Sadness)) {
+                dict[best_photos.Sadness].Add(Emotions.Sadness);
             } else {
-                dict[photos.Sadness] = new List<Emotions> { Emotions.Sadness };
+                dict[best_photos.Sadness] = new List<Emotions> { Emotions.Sadness };
             }
 
-            if (dict.ContainsKey(photos.Surprise)) {
-                dict[photos.Surprise].Add(Emotions.Surprise);
+            if (dict.ContainsKey(best_photos.Surprise)) {
+                dict[best_photos.Surprise].Add(Emotions.Surprise);
             } else {
-                dict[photos.Surprise] = new List<Emotions> { Emotions.Surprise };
+                dict[best_photos.Surprise] = new List<Emotions> { Emotions.Surprise };
             }
 
             return dict;
         }
+        
     }
-    */
 }
