@@ -16,23 +16,34 @@ using System.Net.Http;
 using Emojo.Lib;
 using Emojo.Lib.ViewModels;
 using Newtonsoft.Json;
+using Android.Content.Res;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using Emojo.Droid.Helpers;
 
 namespace Emojo.Droid
 {
     [Activity(Label = "Login", MainLauncher = true)]
     public class LoginActivity : Activity
     {
+        private string client_id;
+        private string client_secret;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AssetManager assets = Assets;
+            using (var sr = new StreamReader(assets.Open("credential.txt")))
+            {
+                client_id = sr.ReadLine();
+                client_secret = sr.ReadLine();
+            }
+           
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Login);
 
             var btnLogin = FindViewById<Button>(Resource.Id.buttonLogin);
             btnLogin.Click += BtnLogin_Click;
         }
-
-        private const string client_id = "4b929f89088547acb455273d73fe2184";
-        private const string client_secret = "c9f9379d17e54c39a441cc9fc9327a96";
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -60,7 +71,7 @@ namespace Emojo.Droid
             StartActivityForResult(ui, -1);
         }
 
-        public async void GoToMainActivity(Account account)
+        public async void GoToMainActivity(Xamarin.Auth.Account account)
         {
             AndroidGetter getter = new AndroidGetter();
             string access_token = account.Properties["access_token"];
