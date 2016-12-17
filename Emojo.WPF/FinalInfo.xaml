@@ -32,7 +32,7 @@
         <StackPanel Orientation="Horizontal">
             <Ellipse Name="ProfilePic" Stretch="Uniform" Width="80" Margin="10,10,0,0" HorizontalAlignment="Left">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="6F6A2355.JPG"></ImageBrush>
+                    <ImageBrush ></ImageBrush>
                 </Ellipse.Fill>
 
             </Ellipse>
@@ -79,28 +79,8 @@
                     <RowDefinition MinHeight="60"/>
                     <RowDefinition MinHeight="60"/>
                 </Grid.RowDefinitions>
-                <Image Source="6F6A2355.JPG" />
-                <Image Grid.Row="1" Source="6F6A2355.JPG" />
-                <Image Grid.Row="2" Source="6F6A2355.JPG" />
-                <Image Grid.Row="3" Source="6F6A2355.JPG" />
-                <Image Grid.Row="4" Source="6F6A2355.JPG" />
-                <Image Grid.Row="5" Source="6F6A2355.JPG" />
-                <Image Grid.Row="6" Source="6F6A2355.JPG" />
-
-                <Image Grid.Column="1" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="1" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="2" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="3" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="4" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="5" Source="6F6A2355.JPG" />
-                <Image Grid.Column="1" Grid.Row="6" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="1" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="2" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="3" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="4" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="5" Source="6F6A2355.JPG" />
-                <Image Grid.Column="2" Grid.Row="6" Source="6F6A2355.JPG" />
+                
+                
 
 
             </Grid>
@@ -117,7 +97,7 @@
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="4" Margin="0 0 0 20">
             
-            <Image Name="ChosenPic" HorizontalAlignment="Center" Source="6F6A2355.JPG" Margin="20 20 20 30"></Image>
+            <Image Name="ChosenPic" HorizontalAlignment="Center"  Margin="20 20 20 30"></Image>
         </StackPanel>
 
     </Grid>
