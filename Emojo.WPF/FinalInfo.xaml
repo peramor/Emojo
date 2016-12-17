@@ -36,7 +36,7 @@
                 </Ellipse.Fill>
 
             </Ellipse>
-            <TextBlock Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF7547BD" >Janekegs</TextBlock>
+            <TextBlock x:Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF7547BD" Text="" />
 
 
         </StackPanel>
@@ -50,15 +50,15 @@
             <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FFF56737" >Choose a picture to analyze</TextBlock>
         </StackPanel>
 
-        <lvc:PieChart Grid.Row="2" Grid.Column="2" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall}">
+        <lvc:PieChart x:Name="chartOverall" Grid.Row="2" Grid.Column="2" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall}" Visibility="Hidden">
             
 
         </lvc:PieChart>
 
-        <lvc:PieChart Grid.Row="2" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall_People}">
+        <lvc:PieChart x:Name="chartOverallPeople" Grid.Row="2" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall_People}" Visibility="Hidden">
             
         </lvc:PieChart>
-        <lvc:PieChart Grid.Row="4" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 15" Series="{Binding ChosenPicture}">
+        <lvc:PieChart x:Name="chartChosenPicture" Grid.Row="4" Grid.Column="3" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 15" Series="{Binding ChosenPicture}" Visibility="Hidden">
             
         </lvc:PieChart>
 

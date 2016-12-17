@@ -37,7 +37,7 @@ namespace Emojo.Lib.Instagram {
 
         }
 
-        public async void GetToken(string code) {
+        public async Task GetToken(string code) {
             try {
                 token = await oauth.RequestToken(code);
             } catch {
