@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Emojo.Lib {
-    static class InterfaceFactory {
+    public static class InterfaceFactory {
         public static IInstagramGetter GetInstagramInterface() {
             return new InstagramGetter();
         }

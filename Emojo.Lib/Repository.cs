@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Emojo.Lib.Instagram;
 using Emojo.Lib.EmotionAPI;
+using Emojo.Lib.ViewModels;
 
 namespace Emojo.Lib {
     public class Repository {
