@@ -9,12 +9,14 @@ using Emojo.Lib.ViewModels;
 
 namespace Emojo.Lib {
     public class Repository {
+        private IInstagramGetter getter;
+        private IEmotionsAPIGetter emgetter;
+
         public User User { get; set; }
         public List<Photo> Photos { get; set; }
 
         public Repository(IInstagramGetter getter, IEmotionsAPIGetter emgetter) {
-            if (getter.Token == null) {
-                throw new Exception("Unauthorized.");
+            while (getter.Token == null) {
             }
             User = new User {
                 UserId = getter.Token.User.Id,
@@ -22,29 +24,33 @@ namespace Emojo.Lib {
                 UserName = getter.Token.User.Username,
                 ProfilePhoto = getter.Token.User.ProfilePicture
             };
-            if (!DB.InsertUserAsync(User).Result) {
-                Photos = DB.GetUserPhotosAsync(User).Result;
-                var recent_photos = getter.GetRecentMedia().Result;
+            this.getter = getter;
+            this.emgetter = emgetter;
+        }
+
+        public async Task LoadUserPhotosAsync() {
+            if (! await DB.InsertUserAsync(User)) {
+                Photos = await DB.GetUserPhotosAsync(User);
+                var recent_photos = await getter.GetRecentMedia();
                 foreach (var rec_photo in recent_photos) {
                     if (!Photos.Any(x => x.PhotoId == rec_photo.PhotoId)) {
                         try {
-                            var new_photo = emgetter.GetEmotionRatings(rec_photo).Result;
-                            DB.InsertPhotoAsync(new_photo).Wait();
+                            var new_photo = await emgetter.GetEmotionRatings(rec_photo);
+                            await DB.InsertPhotoAsync(new_photo);
                             Photos.Add(new_photo);
-                        } catch {}
+                        } catch { }
                     }
                 }
             } else {
-                var recent_photos = getter.GetRecentMedia().Result;
+                var recent_photos = await getter.GetRecentMedia();
                 foreach (var rec_photo in recent_photos) {
                     try {
-                        var new_photo = emgetter.GetEmotionRatings(rec_photo).Result;
-                        DB.InsertPhotoAsync(new_photo).Wait();
+                        var new_photo = await emgetter.GetEmotionRatings(rec_photo);
+                        await DB.InsertPhotoAsync(new_photo);
                         Photos.Add(new_photo);
                     } catch { }
                 }
             }
-            
         }
 
         public Dictionary<string, List<Emotions>> GetMaxByEmotion() {

@@ -9,5 +9,7 @@ namespace Emojo.Lib.Instagram {
         InstaSharp.Models.Responses.OAuthResponse Token { get; }
         Task<User> GetUser();
         Task<List<APIModels.InstagramPhoto>> GetRecentMedia();
+        string GetAuthLink();
+        Task GetToken(string code);
     }
 }
