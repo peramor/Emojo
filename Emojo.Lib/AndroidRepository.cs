@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Emojo.Lib {
     public class AndroidRepository {
-        public Repository repo;
+        public Repository Repository { get; set; }
 
         private InstaSharp.Models.Responses.OAuthResponse BuildToken (OAuthBuildModel model) {
             return new InstaSharp.Models.Responses.OAuthResponse {
@@ -24,7 +24,7 @@ namespace Emojo.Lib {
         
         public AndroidRepository(OAuthBuildModel model) {
             var token = BuildToken(model);
-            repo = new Repository(InterfaceFactory.GetInstagramInterface(token), InterfaceFactory.GetEmotionsInterface());
+            Repository = new Repository(InterfaceFactory.GetInstagramInterface(token), InterfaceFactory.GetEmotionsInterface());
         }
         
     }

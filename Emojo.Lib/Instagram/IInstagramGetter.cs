@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Emojo.Lib.Instagram {
-    interface IInstagramGetter {
+    public interface IInstagramGetter {
         InstaSharp.Models.Responses.OAuthResponse Token { get; }
         Task<User> GetUser();
         Task<List<APIModels.InstagramPhoto>> GetRecentMedia();
