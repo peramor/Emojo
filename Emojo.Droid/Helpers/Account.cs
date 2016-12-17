@@ -8,7 +8,7 @@ namespace Emojo.Droid.Helpers
     {
         private static Random RANDOM = new Random();
         
-        public static int RandomCheeseDrawable
+        public static int RandomPhotoDrawable
         {
             get
             {

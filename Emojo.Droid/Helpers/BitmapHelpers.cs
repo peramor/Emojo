@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +10,27 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using System.Net;
+using Emojo.Lib;
 
 namespace Emojo.Droid.Helpers
 {
     public static class BitmapHelpers
     {
+        private static Dictionary<Emotions, string> _smileDic = new Dictionary<Emotions, string>
+        {
+            {Emotions.Anger, "😡" },
+            {Emotions.Fear, "😱" },
+            {Emotions.Happiness, "😁" },
+            {Emotions.Sadness, "😳" },
+            {Emotions.Surprise, "😳" }
+        }; // 😡 😱 😁 😭 😳
+
+        public static Dictionary<Emotions, string> SmileDic
+        {
+            get { return _smileDic; }
+        }
+
         public static Bitmap LoadAndResizeBitmap(this string fileName, int width, int height)
         {
             // First we get the the dimensions of the file on disk
@@ -41,7 +57,21 @@ namespace Emojo.Droid.Helpers
 
             return resizedBitmap;
         }
+
+        public static Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+
+            return imageBitmap;
+        }
     }
 }
-
-// Resource: [16-43] https://developer.xamarin.com/recipes/android/other_ux/camera_intent/take_a_picture_and_save_using_camera_app/

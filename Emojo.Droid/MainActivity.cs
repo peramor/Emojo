@@ -27,7 +27,7 @@ using Emojo.Droid.Helpers;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Emojo", MainLauncher = true,
+    [Activity(Label = "Emojo", MainLauncher = false, ScreenOrientation = ScreenOrientation.Portrait,
         Icon = "@drawable/icon", Theme = "@style/Theme.DesignDemo")]
     public class MainActivity : AppCompatActivity
     {
@@ -65,8 +65,11 @@ namespace Emojo.Droid
             TabLayout tabs = FindViewById<TabLayout>(Resource.Id.tabs);
             ViewPager viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
             SetUpViewPager(viewPager);
+
             tabs.SetupWithViewPager(viewPager);
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+
+            #region Add Floating Action Button
+            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fabMain);
 
             string SnackbarActionName = "CAMERA IS NOT FOUND";
             Action<View> SnackbarAction = (v) => { };
@@ -86,8 +89,23 @@ namespace Emojo.Droid
                     .SetAction(SnackbarActionName, SnackbarAction)
                     .Show();
             };
+            #endregion
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.sample_actions, menu);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Intent intent = new Intent(this, typeof(LoginActivity));
+            StartActivity(intent);
+            return true;
+        }
+
+        #region Add Camera
         private void CreateDirectoryForPictures()
         {
             App._dir = new File(
@@ -133,35 +151,27 @@ namespace Emojo.Droid
             // and cause the application to crash.
 
             int height = Resources.DisplayMetrics.HeightPixels;
-            int width = _imageView.Height;
-            App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
-            if (App.bitmap != null)
-            {
-                _imageView.SetImageBitmap(App.bitmap);
-                App.bitmap = null;
-            }
+            //int width = _imageView.Height;
+            //App.bitmap = App._file.Path.LoadAndResizeBitmap(width, height);
+            //if (App.bitmap != null)
+            //{
+            //    _imageView.SetImageBitmap(App.bitmap);
+            //    App.bitmap = null;
+            //}
 
             // Dispose of the Java side bitmap.
             GC.Collect();
         }
+        #endregion
 
         private void SetUpViewPager(ViewPager viewPager)
         {
             TabAdapter adapter = new TabAdapter(SupportFragmentManager);
             //adapter.AddFragment(new Fragment1(), "Collage");
-            adapter.AddFragment(new Fragment3(), "Emotions");
-            adapter.AddFragment(new Fragment2(photoLinks), "My photos");
+            adapter.AddFragment(new FragmentEmotions(), "Emotions");
+            adapter.AddFragment(new FragmentMyPhoto(photoLinks), "My photos");
 
             viewPager.Adapter = adapter;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            switch (item.ItemId)
-            {
-                default:
-                    return base.OnOptionsItemSelected(item);
-            }
         }
 
         private void SetUpDrawerContent(NavigationView navigationView)

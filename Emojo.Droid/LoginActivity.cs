@@ -20,17 +20,23 @@ using Android.Content.Res;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Emojo.Droid.Helpers;
+using Android.Support.V7.App;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Login", MainLauncher = false)]
-    public class LoginActivity : Activity
+    [Activity(Label = "Login", MainLauncher = true
+        , ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait
+        , Theme = "@style/MyTheme.Login")]
+    public class LoginActivity : AppCompatActivity
     {
         private string client_id;
         private string client_secret;
+        Button btnLogin;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            RequestWindowFeature(WindowFeatures.NoTitle);            
+
             AssetManager assets = Assets;
             using (var sr = new StreamReader(assets.Open("credential.txt")))
             {
@@ -41,7 +47,7 @@ namespace Emojo.Droid
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Login);
 
-            var btnLogin = FindViewById<Button>(Resource.Id.buttonLogin);
+            btnLogin = FindViewById<Button>(Resource.Id.buttonLogin);
             btnLogin.Click += BtnLogin_Click;
         }
 
@@ -58,6 +64,8 @@ namespace Emojo.Droid
             {
                 if (eventArgs.IsAuthenticated)
                 {
+                    btnLogin.Enabled = false;
+
                     var loggedInAccount = eventArgs.Account;
                     AccountStore.Create(this).Save(loggedInAccount, "Instagram");
                     GoToMainActivity(loggedInAccount);
