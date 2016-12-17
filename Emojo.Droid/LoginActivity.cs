@@ -1,25 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using InstaSharp;
-using System.Threading.Tasks;
 using Xamarin.Auth;
-using System.Net.Http;
-using Emojo.Lib;
-using Emojo.Lib.ViewModels;
-using Newtonsoft.Json;
 using Android.Content.Res;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using Emojo.Droid.Helpers;
 using Android.Support.V7.App;
 
 namespace Emojo.Droid
@@ -81,31 +67,31 @@ namespace Emojo.Droid
 
         public async void GoToMainActivity(Xamarin.Auth.Account account)
         {
-            AndroidGetter getter = new AndroidGetter();
-            string access_token = account.Properties["access_token"];
-            string userStr = account.Properties["user"];
-            var user = JsonConvert.DeserializeObject<DTO.User>(userStr);
+            
+            //string access_token = account.Properties["access_token"];
+            //string userStr = account.Properties["user"];
+            //var user = JsonConvert.DeserializeObject<DTO.User>(userStr);
 
-            var photos = await getter.GetRecentPhotosRecognized(new OAuthBuildModel
-            {
-                AccessToken = access_token,
-                FullName = user.FullName,
-                ProfilePicture = user.ProfilePicture,
-                Id = user.Id,
-                Username = user.UserName
-            });
+            //var photos = await getter.GetRecentPhotosRecognized(new OAuthBuildModel
+            //{
+            //    AccessToken = access_token,
+            //    FullName = user.FullName,
+            //    ProfilePicture = user.ProfilePicture,
+            //    Id = user.Id,
+            //    Username = user.UserName
+            //});
 
-            Intent intent = new Intent(this, typeof(MainActivity));
+            //Intent intent = new Intent(this, typeof(MainActivity));
 
-            var thumbNailPhotos = photos.Select(p => p.LinkThumbnail).ToList();
-            var thumbNailPhotosArr = new string[thumbNailPhotos.Count];
-            for (int i = 0; i < thumbNailPhotosArr.Length; i++)
-            {
-                thumbNailPhotosArr[i] = thumbNailPhotos[i];
-            }
+            //var thumbNailPhotos = photos.Select(p => p.LinkThumbnail).ToList();
+            //var thumbNailPhotosArr = new string[thumbNailPhotos.Count];
+            //for (int i = 0; i < thumbNailPhotosArr.Length; i++)
+            //{
+            //    thumbNailPhotosArr[i] = thumbNailPhotos[i];
+            //}
 
-            intent.PutExtra("photos", thumbNailPhotosArr);
-            StartActivity(intent);
+            //intent.PutExtra("photos", thumbNailPhotosArr);
+            //StartActivity(intent);
         }
     }
 }
