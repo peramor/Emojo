@@ -28,8 +28,6 @@ namespace Emojo.WPF
                 image.BeginInit();
                 image.StreamSource = stream;
                 image.EndInit();
-
-                // The next call makes it possible to access this image from a UI thread
                 image.Freeze();
                 return image;
             }

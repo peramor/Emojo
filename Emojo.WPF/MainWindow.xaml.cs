@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Emojo.Lib;
+using Emojo.Lib.Instagram;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,18 +22,27 @@ namespace Emojo.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IInstagramGetter getter;
+
         public MainWindow()
         {
             InitializeComponent();
+            getter = InterfaceFactory.GetInstagramInterface();
         }
 
         private void LoginButtonClicked(object sender, RoutedEventArgs e)
         {
-
-            var g = new FinalInfo();
-            g.Show();
-
-
+            var loginBrowser = new LoginBrowserWindow(getter);
+            loginBrowser.OnLoggedOn += LogOn;
+            loginBrowser.Show();
         }
+
+        private void LogOn() {
+            var infoWindow = new FinalInfo(getter);
+            infoWindow.Show();
+            infoWindow.Closed += (s, a) => Close();
+            Hide();
+        }
+
     }
 }
