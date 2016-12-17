@@ -4,17 +4,43 @@
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
     p1:id="@+id/linearLayout1">
-    <TextView
-        p1:text="Хех, лол, лолушки"
-        p1:id="@+id/textView1"
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content" />
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2">
+        <Refractored.Controls.CircleImageView
+            p1:layout_width="80dp"
+            p1:layout_height="80dp"
+            p1:id="@+id/profilePicture"
+            p1:layout_margin="5dp" />
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content">
+            <TextView
+                p1:id="@+id/textName"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:text="Person name"
+                p1:textSize="25dp"
+                p1:layout_margin="5dp"
+                p1:textStyle="bold" />
+            <TextView
+                p1:id="@+id/textBio"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:text="Person name"
+                p1:textSize="20dp"
+                p1:layout_marginBottom="5dp"
+                p1:layout_marginLeft="5dp"
+                p1:layout_marginRight="5dp" />
+        </LinearLayout>
+    </LinearLayout>
     <com.github.mikephil.charting.charts.PieChart
         p1:layout_width="match_parent"
         p1:layout_height="281.5dp"
         p1:id="@+id/pieChart1" />
-    <com.github.mikephil.charting.charts.PieChart
-        p1:layout_width="match_parent"
-        p1:layout_height="262.5dp"
-        p1:id="@+id/pieChart2" />
 </LinearLayout>

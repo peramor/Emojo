@@ -27,9 +27,7 @@ namespace Emojo.Droid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             RecyclerView recyclerView = inflater.Inflate(Resource.Layout.Fragment1, container, false) as RecyclerView;
-
             SetUpRecyclerView(recyclerView);
-
             return recyclerView;
         }
 

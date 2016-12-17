@@ -10,6 +10,7 @@ using MikePhil.Charting.Charts;
 using System.Collections.Generic;
 using Android.Graphics;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Emojo.Droid.Fragments
 {
@@ -37,9 +38,6 @@ namespace Emojo.Droid.Fragments
             gridView = view.FindViewById<GridView>(Resource.Id.gridview);
 
             gridView.Adapter = new ImageAdapter(this.Context, _photoLinks);
-
-
-            gridView.ItemClick += (s, a) => { };
             
             return view;
         }
@@ -71,17 +69,22 @@ namespace Emojo.Droid.Fragments
             return 0;
         }
 
-        // create a new ImageView for each item referenced by the Adapter
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             ImageView imageView;
 
             if (convertView == null)
-            {  // if it's not recycled, initialize some attributes
+            {  
                 imageView = new ImageView(context);
                 imageView.LayoutParameters = new GridView.LayoutParams(150, 150);
                 imageView.SetScaleType(ImageView.ScaleType.CenterCrop);
-                imageView.Click += (a, e) => { };
+                imageView.Click += (a, e) =>
+                {
+                    Context context = imageView.Context;
+                    Intent intent = new Intent(context, typeof(AccountDetailActivity));
+
+                    context.StartActivity(intent);
+                };
             }
             else
             {
@@ -110,6 +113,4 @@ namespace Emojo.Droid.Fragments
             return imageBitmap;
         }
     }
-
-
 }

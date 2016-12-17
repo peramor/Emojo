@@ -23,7 +23,7 @@ using Emojo.Droid.Helpers;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Login", MainLauncher = true)]
+    [Activity(Label = "Login", MainLauncher = false)]
     public class LoginActivity : Activity
     {
         private string client_id;
