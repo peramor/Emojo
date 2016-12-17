@@ -15,6 +15,7 @@ using DesignLibrary.Helpers;
 
 namespace Emojo.Droid.Fragments
 {
+    #region Folowers Fragment
     public class Fragment1 : SupportFragment
     {
         public override void OnCreate(Bundle savedInstanceState)
@@ -27,9 +28,7 @@ namespace Emojo.Droid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             RecyclerView recyclerView = inflater.Inflate(Resource.Layout.Fragment1, container, false) as RecyclerView;
-
             SetUpRecyclerView(recyclerView);
-
             return recyclerView;
         }
 
@@ -45,7 +44,7 @@ namespace Emojo.Droid.Fragments
                 //An item has been clicked
                 Context context = view.Context;
                 Intent intent = new Intent(context, typeof(AccountDetailActivity));
-                intent.PutExtra(AccountDetailActivity.EXTRA_NAME, values[position]);
+                //intent.PutExtra(AccountDetailActivity.EXTRA_NAME, values[position]);
 
                 context.StartActivity(intent);
             });
@@ -96,7 +95,7 @@ namespace Emojo.Droid.Fragments
                 simpleHolder.mBoundString = mValues[position];
                 simpleHolder.mTxtView.Text = mValues[position];
 
-                int drawableID = Account.RandomCheeseDrawable;
+                int drawableID = Account.RandomPhotoDrawable;
                 BitmapFactory.Options options = new BitmapFactory.Options();
 
                 if (mCalculatedSizes.ContainsKey(drawableID))
@@ -164,4 +163,5 @@ namespace Emojo.Droid.Fragments
             }
         }
     }
+#endregion
 }
