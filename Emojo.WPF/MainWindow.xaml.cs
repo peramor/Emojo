@@ -27,6 +27,7 @@ namespace Emojo.WPF
 
         private void LoginButtonClicked(object sender, RoutedEventArgs e)
         {
+
             var g = new FinalInfo();
             g.Show();
 

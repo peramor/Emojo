@@ -1,168 +1,36 @@
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\App.g.cs
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\MainWindow.baml
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-C:\Users\Roman\Desktop\team_project\emojo\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\App.g.cs
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\MainWindow.baml
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-C:\Users\Михаил\Source\Repos\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\App.g.cs
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\MainWindow.baml
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\FinalInfo.g.cs
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Livecharts.dll
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.dll
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Livecharts.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\Livecharts.xml
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.pdb
-\\psf\Home\Desktop\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.xml
-\\psf\Home\Desktop\emojo\Emojo.WPF\obj\Debug\FinalInfo.baml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\EntityFramework.dll
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Livecharts.dll
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\EntityFramework.xml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Livecharts.pdb
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\Livecharts.xml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\FinalInfo.g.cs
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\App.g.cs
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\FinalInfo.baml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\MainWindow.baml
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\EMOJO_STABLE\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\FinalInfo.g.cs
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\App.g.cs
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Livecharts.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\InstaSharp.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Common.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Newtonsoft.Json.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\crypto.dll
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Livecharts.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Livecharts.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\Newtonsoft.Json.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\crypto.pdb
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\bin\Debug\crypto.xml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\FinalInfo.baml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\MainWindow.baml
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-C:\Users\rbt1\Desktop\InstagramProj\Emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\EntityFramework.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Livecharts.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\InstaSharp.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Common.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\crypto.dll
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\EntityFramework.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Livecharts.pdb
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Livecharts.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\crypto.pdb
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\bin\Debug\crypto.xml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\FinalInfo.g.cs
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\MainWindow.g.cs
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\App.g.cs
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\FinalInfo.baml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\MainWindow.baml
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.exe
-C:\Users\Roman\Desktop\emojo_taking_new_way\emojo\Emojo.WPF\obj\Debug\Emojo.WPF.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.csprojResolveAssemblyReference.cache
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\FinalInfo.g.cs
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\MainWindow.g.cs
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\App.g.cs
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.cache
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF_MarkupCompile.lref
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Emojo.WPF.exe.config
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Emojo.WPF.exe
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Emojo.WPF.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Emojo.Lib.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\EntityFramework.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Livecharts.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\LiveCharts.Wpf.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\InstaSharp.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Emotion.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Newtonsoft.Json.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\crypto.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Microsoft.ProjectOxford.Common.dll
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Emojo.Lib.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\EntityFramework.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\EntityFramework.SqlServer.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Livecharts.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Livecharts.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\LiveCharts.Wpf.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\LiveCharts.Wpf.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\Newtonsoft.Json.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\crypto.pdb
+\\psf\Home\Desktop\emojo final\Emojo.WPF\bin\Debug\crypto.xml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\FinalInfo.baml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\MainWindow.baml
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.g.resources
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.Properties.Resources.resources
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.exe
+\\psf\Home\Desktop\emojo final\Emojo.WPF\obj\Debug\Emojo.WPF.pdb

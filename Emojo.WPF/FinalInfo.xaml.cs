@@ -159,31 +159,38 @@ namespace Emojo.WPF
 
         public Func<ChartPoint, string> PointLabel { get; set; }
 
-        private void ButtonClickOk(object sender, RoutedEventArgs e)
+        private async void ButtonClickOk(object sender, RoutedEventArgs e)
         {
-            var uri = new Uri("https://scontent-arn2-1.cdninstagram.com/t51.2885-19/s150x150/15099481_273386176397163_8805222941563289600_a.jpg");
-
-            Image Box = new Image();
-            Box.Source = new BitmapImage(uri);
-            gridPics.Children.Add(Box);
-            Grid.SetRow(Box, 1);
-            Grid.SetColumn(Box, 1);
-            Box.MouseEnter += (s, a) => ChosenPic.Source = new BitmapImage(uri);
-            Box.MouseEnter += (s, a) =>
+            ImageDownloader im = new ImageDownloader();
+            const string uri = "https://scontent-arn2-1.cdninstagram.com/t51.2885-19/s150x150/15099481_273386176397163_8805222941563289600_a.jpg";
+            for (int i = 0; i < 7; i++)
             {
-                var r = new Random();
-                foreach (var series in ChosenPicture)
+                for (int j = 0; j < 3; j++)
                 {
-                    foreach (var observable in series.Values.Cast<ObservableValue>())
+                    var image = im.DownloadImageTaskAsync(uri);
+                    Image Box = new Image();
+                    Box.Source = await image;
+                    gridPics.Children.Add(Box);
+                    Grid.SetRow(Box, i);
+                    Grid.SetColumn(Box, j);
+                    Box.MouseEnter += (s, a) => ChosenPic.Source = new BitmapImage(new Uri(uri));
+                    Box.MouseEnter += (s, a) =>
                     {
-                        observable.Value = r.Next(0, 10);
-                    }
+                        var r = new Random();
+                        foreach (var series in ChosenPicture)
+                        {
+                            foreach (var observable in series.Values.Cast<ObservableValue>())
+                            {
+                                observable.Value = r.Next(0, 10);
+                            }
+                        }
+                    };
                 }
-            };
-            
+            }
 
 
-            ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri(@"\\psf\Home\Desktop\A.JPG")));
+
+            ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri("https://scontent-arn2-1.cdninstagram.com/t51.2885-19/s150x150/15099481_273386176397163_8805222941563289600_a.jpg")));
         }
 
         
