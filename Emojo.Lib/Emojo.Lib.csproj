@@ -86,7 +86,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Repository.cs" />
     <Compile Include="ViewModels\OAuthBuildModel.cs" />
   </ItemGroup>
   <ItemGroup>
