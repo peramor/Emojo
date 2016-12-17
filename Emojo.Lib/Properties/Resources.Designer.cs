@@ -61,7 +61,7 @@ namespace Emojo.Lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 41bb2944418b4e0d97cee44411b35261.
+        ///   Looks up a localized string similar to 4b929f89088547acb455273d73fe2184.
         /// </summary>
         internal static string APIKey {
             get {
@@ -70,7 +70,7 @@ namespace Emojo.Lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to b9edde48cbe24132819414d1919d433c.
+        ///   Looks up a localized string similar to c9f9379d17e54c39a441cc9fc9327a96.
         /// </summary>
         internal static string APISecret {
             get {
@@ -97,7 +97,7 @@ namespace Emojo.Lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://localhost.
+        ///   Looks up a localized string similar to https://emojo.azurewebsites.net/auth.
         /// </summary>
         internal static string RedirectURI {
             get {

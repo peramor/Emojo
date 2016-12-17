@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Web;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -27,14 +28,15 @@ namespace Emojo.WPF {
             InitializeComponent();
             this.getter = getter;
             browser.Navigate(getter.GetAuthLink());
-            
+
         }
+
 
         private async void browser_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e) {
             var url = e.Uri.Query;
-            if (url.Contains("code")) {
+            if (url.Contains("code=")) {
                 Hide();
-                var code = url.Substring(url.IndexOf("code") + 5);
+                var code = url.Substring(url.IndexOf("code=") + 5);
                 await getter.GetToken(code);               
                 OnLoggedOn();
                 Close();                

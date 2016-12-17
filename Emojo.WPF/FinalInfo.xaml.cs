@@ -86,41 +86,13 @@ namespace Emojo.WPF
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Surprise]
                 }
-            };
-            Overall_People = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "Alone",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(1) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Anger]
-
-                },
-                new PieSeries
-                {
-                    Title = "With Other People",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(1) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Happiness]
-
-                },
-                new PieSeries
-                {
-                    Title = "No people",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(1) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Fear]
-                }
-
-            };
-
-            DataContext = this;
+            };           
 
         }
 
         private async void ButtonClickOk(object sender, RoutedEventArgs e)
         {
+            textBlockLoading.Visibility = Visibility.Visible;
             await repository.LoadUserPhotosAsync();
             int counter = 0;
             foreach (var photo in repository.Photos) {
@@ -134,12 +106,13 @@ namespace Emojo.WPF
                 counter++;
             }
             var averages = repository.GetEmotionDictionary();
+
             Overall = new SeriesCollection
             {
                 new PieSeries
                 {
                     Title = "Anger",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(averages[Emotions.Anger]) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(averages[Emotions.Anger],2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Anger]
 
@@ -147,7 +120,7 @@ namespace Emojo.WPF
                 new PieSeries
                 {
                     Title = "Happiness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(averages[Emotions.Happiness]) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(averages[Emotions.Happiness],2)) },
                     DataLabels = true,
                     Fill= colorsDict[Emotions.Happiness]
 
@@ -155,24 +128,45 @@ namespace Emojo.WPF
                 new PieSeries
                 {
                     Title = "Fear",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(averages[Emotions.Fear]) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(averages[Emotions.Fear],2)) },
                     DataLabels = true,
                     Fill= colorsDict[Emotions.Fear]
                 },
                 new PieSeries
                 {
                     Title = "Sadness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(averages[Emotions.Sadness]) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(averages[Emotions.Sadness],2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Sadness]
                 },
                  new PieSeries
                 {
                     Title = "Surprise",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(averages[Emotions.Surprise]) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(averages[Emotions.Surprise],2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Surprise]
                 }
+            };
+
+            Overall_People = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Alone",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(repository.PeopleCounts[1]) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Anger]
+
+                },
+                new PieSeries
+                {
+                    Title = "With Other People",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(repository.PeopleCounts[2]) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Happiness]
+
+                },
+
             };
 
 
@@ -180,8 +174,9 @@ namespace Emojo.WPF
             chartOverallPeople.Visibility = Visibility.Visible;
             chartChosenPicture.Visibility = Visibility.Visible;
             await ChoosePicture(repository.Photos.First());
-
+            DataContext = null;
             DataContext = this;
+            textBlockLoading.Visibility = Visibility.Hidden;
         }
 
         private async Task ChoosePicture(Photo photo) {
@@ -191,7 +186,7 @@ namespace Emojo.WPF
                 new PieSeries
                 {
                     Title = "Anger",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(photo.Anger*100) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Anger,2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Anger]
 
@@ -199,7 +194,7 @@ namespace Emojo.WPF
                 new PieSeries
                 {
                     Title = "Happiness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(photo.Happiness*100) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Happiness,2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Happiness]
 
@@ -207,25 +202,26 @@ namespace Emojo.WPF
                 new PieSeries
                 {
                     Title = "Fear",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(photo.Fear*100) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Fear)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Fear]
                 },
                 new PieSeries
                 {
                     Title = "Sadness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(photo.Sadness*100) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Sadness,2)) },
                     DataLabels = true,
                     Fill = colorsDict[Emotions.Sadness]
                 },
                  new PieSeries
                 {
                     Title = "Surprise",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(photo.Surprise*100) },
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Surprise,2)) },
                     DataLabels = true,
                     Fill= colorsDict[Emotions.Surprise]
                 }
             };
+            DataContext = null;
             DataContext = this;
         }
 
