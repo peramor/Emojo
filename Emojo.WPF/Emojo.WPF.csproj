@@ -90,6 +90,7 @@
     <Compile Include="FinalInfo.xaml.cs">
       <DependentUpon>FinalInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageDownloader.cs" />
     <Compile Include="LoginBrowserWindow.xaml.cs">
       <DependentUpon>LoginBrowserWindow.xaml</DependentUpon>
     </Compile>

@@ -51,7 +51,6 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -80,7 +79,6 @@
     <Compile Include="EmotionAPI\EmotionsAPIGetter.cs" />
     <Compile Include="EmotionAPI\IEmotionsAPIGetter.cs" />
     <Compile Include="Models\Photo.cs" />
-    <Compile Include="ImageDownloader.cs" />
     <Compile Include="Instagram\IInstagramGetter.cs" />
     <Compile Include="Instagram\InstagramGetter.cs" />
     <Compile Include="InterfaceFactory.cs" />
