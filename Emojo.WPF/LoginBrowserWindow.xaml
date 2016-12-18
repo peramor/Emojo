@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Emojo.WPF"
         mc:Ignorable="d"
-        Title="LoginBrowserWindow" Height="300" Width="451.333">
+        Title="LoginBrowserWindow" Height="289.958" Width="438.781" ResizeMode="NoResize">
     <Grid>
         <WebBrowser x:Name="browser" HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="443" Navigated="browser_Navigated"/>
 

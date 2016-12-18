@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Emojo.WPF"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="EMOJO" MinHeight="642.96" MinWidth="785.774" FontFamily="Segoe UI Semibold" ResizeMode="CanResizeWithGrip" Background="White" >
+        Title="EMOJO" MinHeight="642.96" MinWidth="785.774" FontFamily="Segoe UI Semibold" ResizeMode="CanResizeWithGrip" Loaded="Start_loading" Background="#FFEDF2F4" >
     <Window.Resources>
         <Color x:Key="Color1">#FFC397F7</Color>
     </Window.Resources>
@@ -27,7 +27,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="1" Click="ButtonClickOk">OK</Button>
+
 
         <StackPanel Orientation="Horizontal">
             <Ellipse Name="ProfilePic" Stretch="Uniform" Width="80" Margin="10,10,0,0" HorizontalAlignment="Left">
@@ -36,7 +36,7 @@
                 </Ellipse.Fill>
 
             </Ellipse>
-            <TextBlock x:Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF7547BD" Text="" />
+            <TextBlock x:Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF5EB79F" Text="" />
 
 
         </StackPanel>
@@ -44,10 +44,10 @@
 
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Margin="122,0,121,0" Foreground="#FFD92B70" >Overall Info</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Margin="122,0,121,0" Foreground="#FF1D9974" >Overall Info</TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3">
-            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FFF56737" >Choose a picture to analyze</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FF1D9974" >Choose a picture to analyze</TextBlock>
         </StackPanel>
 
         <lvc:PieChart x:Name="chartOverall" Grid.Row="2" Grid.Column="2" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall}" Visibility="Hidden">
@@ -89,11 +89,11 @@
         </ScrollViewer>
         <StackPanel Grid.Column="2" Margin="0 10 "/>
         <StackPanel Grid.Column="2" Margin="10,10,0,10" Grid.ColumnSpan="2">
-            <TextBlock x:Name="textBlockLoading" HorizontalAlignment="Center" Foreground="#FFBA3A91" FontSize="42" FontFamily="MV Boli" Height="64" Margin="128,0,97,0" Width="200" Visibility="Hidden">Loading...</TextBlock>
+            <TextBlock x:Name="textBlockLoading" HorizontalAlignment="Center" Foreground="#FF4D625C" FontSize="42" FontFamily="MV Boli" Height="64" Margin="128,0,97,0" Width="200" Visibility="Hidden">Loading...</TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="4" Margin="0 0 0 20">
 
-            <Image Name="ChosenPic" HorizontalAlignment="Center"  Margin="20 20 20 30"></Image>
+            <Image Name="ChosenPic" HorizontalAlignment="Center"  Margin="45 5 30 30"></Image>
         </StackPanel>
 
     </Grid>

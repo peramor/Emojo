@@ -132,5 +132,11 @@
       <Name>Emojo.Lib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="5243641910_e30e0171b2_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="5243641910_e30e0171b2_oem.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

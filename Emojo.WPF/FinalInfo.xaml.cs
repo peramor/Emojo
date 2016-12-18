@@ -37,11 +37,11 @@ namespace Emojo.WPF
             repository = new Repository(getter, InterfaceFactory.GetEmotionsInterface());
             downloader = new ImageDownloader();
 
-            colorsDict[Emotions.Anger] = new SolidColorBrush { Color = Color.FromRgb(116, 101, 218) };
-            colorsDict[Emotions.Happiness] = new SolidColorBrush { Color = Color.FromRgb(197, 42, 178) };
-            colorsDict[Emotions.Fear] = new SolidColorBrush { Color = Color.FromRgb(212, 65, 127) };
-            colorsDict[Emotions.Sadness] = new SolidColorBrush { Color = Color.FromRgb(242, 145, 63) };
-            colorsDict[Emotions.Surprise] = new SolidColorBrush { Color = Color.FromRgb(255, 220, 126) };
+            colorsDict[Emotions.Anger] = new SolidColorBrush { Color = Color.FromRgb(94, 183, 159) };
+            colorsDict[Emotions.Happiness] = new SolidColorBrush { Color = Color.FromRgb(255, 217, 178) };
+            colorsDict[Emotions.Fear] = new SolidColorBrush { Color = Color.FromRgb(195, 55, 65) };
+            colorsDict[Emotions.Sadness] = new SolidColorBrush { Color = Color.FromRgb(72, 120, 118) };
+            colorsDict[Emotions.Surprise] = new SolidColorBrush { Color = Color.FromRgb(251, 149, 71) };
 
             ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri(repository.User.ProfilePhoto)));
             UserName.Text = repository.User.UserName;
@@ -90,12 +90,61 @@ namespace Emojo.WPF
 
         }
 
-        private async void ButtonClickOk(object sender, RoutedEventArgs e)
+        
+
+        private async Task ChoosePicture(Photo photo) {
+            ChosenPic.Source = await downloader.DownloadImageTaskAsync(photo.LinkStandard);
+            ChosenPicture = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Anger",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Anger,2)) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Anger]
+
+                },
+                new PieSeries
+                {
+                    Title = "Happiness",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Happiness,2)) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Happiness]
+
+                },
+                new PieSeries
+                {
+                    Title = "Fear",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Fear)) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Fear]
+                },
+                new PieSeries
+                {
+                    Title = "Sadness",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Sadness,2)) },
+                    DataLabels = true,
+                    Fill = colorsDict[Emotions.Sadness]
+                },
+                 new PieSeries
+                {
+                    Title = "Surprise",
+                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Surprise,2)) },
+                    DataLabels = true,
+                    Fill= colorsDict[Emotions.Surprise]
+                }
+            };
+            DataContext = null;
+            DataContext = this;
+        }
+
+        private async void Start_loading(object sender, RoutedEventArgs e)
         {
             textBlockLoading.Visibility = Visibility.Visible;
             await repository.LoadUserPhotosAsync();
             int counter = 0;
-            foreach (var photo in repository.Photos) {
+            foreach (var photo in repository.Photos)
+            {
                 var image = downloader.DownloadImageTaskAsync(photo.LinkThumbnail);
                 Image Box = new Image();
                 Box.Source = await image;
@@ -177,53 +226,7 @@ namespace Emojo.WPF
             DataContext = null;
             DataContext = this;
             textBlockLoading.Visibility = Visibility.Hidden;
+
         }
-
-        private async Task ChoosePicture(Photo photo) {
-            ChosenPic.Source = await downloader.DownloadImageTaskAsync(photo.LinkStandard);
-            ChosenPicture = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "Anger",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Anger,2)) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Anger]
-
-                },
-                new PieSeries
-                {
-                    Title = "Happiness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Happiness,2)) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Happiness]
-
-                },
-                new PieSeries
-                {
-                    Title = "Fear",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Fear)) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Fear]
-                },
-                new PieSeries
-                {
-                    Title = "Sadness",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Sadness,2)) },
-                    DataLabels = true,
-                    Fill = colorsDict[Emotions.Sadness]
-                },
-                 new PieSeries
-                {
-                    Title = "Surprise",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(Math.Round(photo.Surprise,2)) },
-                    DataLabels = true,
-                    Fill= colorsDict[Emotions.Surprise]
-                }
-            };
-            DataContext = null;
-            DataContext = this;
-        }
-
     }
 }

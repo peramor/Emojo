@@ -39,7 +39,7 @@ namespace Emojo.WPF {
                 var code = url.Substring(url.IndexOf("code=") + 5);
                 await getter.GetToken(code);               
                 OnLoggedOn();
-                Close();                
+                //Close();                
             }
         }
     }
