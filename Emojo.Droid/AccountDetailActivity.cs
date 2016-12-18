@@ -12,13 +12,15 @@ using System;
 using Context = Android.Content.Context;
 using MikePhil.Charting.Charts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Emojo.Droid
 {
     [Activity(Label = "Photo detail", Theme = "@style/Theme.DesignDemo", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class AccountDetailActivity : AppCompatActivity
     {
-        private string uri;
+        private string id;
+        Photo photo;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,23 +32,17 @@ namespace Emojo.Droid
             SetSupportActionBar(toolBar);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
 
-            uri = Intent.GetStringExtra("PHOTO_URI");
+            id = Intent.GetStringExtra("PHOTO_ID");
+            photo = Repository.Photos.First(p => p.PhotoId == id);
 
             CollapsingToolbarLayout collapsingToolBar = FindViewById<CollapsingToolbarLayout>(Resource.Id.collapsing_toolbar);
 
             PieChart pie = FindViewById<PieChart>(Resource.Id.pieChartOne);
             var builder = ChartFactory.Default.GetChartBuilder(pie);
+            builder.Text = Repository.GetSmile(photo).Result;
             var gen = new Random();
 
-            Dictionary<string, double> dataSet = new Dictionary<string, double>
-            {
-                { "Happy", gen.Next(0, 100) },
-                { "Sad", gen.Next(0, 100) },
-                { "Fear", gen.Next(0, 100) },
-                { "Angry", gen.Next(0, 100) },
-                { "Surprise", gen.Next(0, 100) },
-            };
-
+            Dictionary<string, double> dataSet = Repository.GetOne(photo).Result;
             builder.SetData(dataSet);
 
             LoadBackDrop();
@@ -67,7 +63,7 @@ namespace Emojo.Droid
         private void LoadBackDrop()
         {
             ImageView imageView = FindViewById<ImageView>(Resource.Id.backdrop);
-            imageView.SetImageBitmap(BitmapHelpers.GetImageBitmapFromUrl(uri));
+            imageView.SetImageBitmap(BitmapHelpers.GetImageBitmapFromUrl(photo.LinkStandard));
         }
     }
 }

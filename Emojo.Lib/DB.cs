@@ -40,7 +40,7 @@ namespace Emojo.Lib
                 "VALUES ('{0}', '{1}', '{2}', '{3}')", u.UserName, u.FullName, u.ProfilePhoto, u.UserId);
             using (var client = new HttpClient())
             {
-                var response = await client.GetStringAsync($"{uri}?sql={sql}&appId={Properties.Resources.AppId}");
+                var response = client.GetStringAsync($"{uri}?sql={sql}&appId={Properties.Resources.AppId}").Result;
                 if (string.IsNullOrEmpty(response))
                     return true;
                 else

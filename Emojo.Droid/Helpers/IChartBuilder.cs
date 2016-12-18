@@ -16,6 +16,7 @@ namespace Emojo.Droid.Helpers
     interface IChartBuilder<T>
     {
         string Description { get; set; }
+        string Text { get; set; }
         T Chart { get; set; }
         int[] Colors { get; set; }        
         void SetData(Dictionary<string, double> dataSet);

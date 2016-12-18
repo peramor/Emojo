@@ -30,16 +30,9 @@ namespace Emojo.Droid.Fragments
             Random gen = new Random();
 
             var builder = ChartFactory.Default.GetChartBuilder(pie);
-            builder.Description = "from 20 photo";
+            builder.Description = "from " + Repository.Photos.Count + " photo";
 
-            Dictionary<string, double> dataSet = new Dictionary<string, double>
-            {
-                { "Happy", gen.Next(0, 100) },
-                { "Sad", gen.Next(0, 100) },
-                { "Fear", gen.Next(0, 100) },
-                { "Angry", gen.Next(0, 100) },
-                { "Surprise", gen.Next(0, 100) },
-            };
+            Dictionary<string, double> dataSet = Repository.GetOverall().Result;
 
             builder.SetData(dataSet);
 
@@ -47,9 +40,10 @@ namespace Emojo.Droid.Fragments
             var name = view.FindViewById<TextView>(Resource.Id.textName);
             var bio = view.FindViewById<TextView>(Resource.Id.textBio);
 
-            profilePicture.SetImageResource(Resource.Drawable.face_2);
-            name.Text = "Kris_ty";
-            bio.Text = "Кристина Солнцева";
+            profilePicture.SetImageBitmap(BitmapHelpers.GetImageBitmapFromUrl(Repository.User.ProfilePhoto));
+
+            name.Text = Repository.User.UserName;
+            bio.Text = Repository.User.FullName;
 
             return view;
         }

@@ -19,13 +19,6 @@ namespace Emojo.Droid.Fragments
 {
     public class FragmentMyPhoto : SupportFragment
     {
-        List<string> _photoLinks;
-
-        public FragmentMyPhoto(List<string> photoLinks)
-        {
-            _photoLinks = photoLinks;
-        }
-
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -40,7 +33,7 @@ namespace Emojo.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.Fragment2, container, false);
             gridView = view.FindViewById<GridView>(Resource.Id.gridview);
 
-            gridView.Adapter = new ImageAdapter(this.Context, _photoLinks);
+            gridView.Adapter = new ImageAdapter(this.Context, Repository.Photos);
             
             return view;
         }
@@ -49,9 +42,9 @@ namespace Emojo.Droid.Fragments
     public class ImageAdapter : BaseAdapter
     {
         Context context;
-        List<string> _source;
+        List<Photo> _source;
 
-        public ImageAdapter(Context c, List<string> source)
+        public ImageAdapter(Context c, List<Photo> source)
         {
             context = c;
             _source = source;
@@ -85,7 +78,7 @@ namespace Emojo.Droid.Fragments
                 {
                     Context context = imageView.Context;
                     Intent intent = new Intent(context, typeof(AccountDetailActivity));
-                    intent.PutExtra("PHOTO_URI", _source[position]);
+                    intent.PutExtra("PHOTO_ID", _source[position].PhotoId);
                     context.StartActivity(intent);
                 };
             }
@@ -94,11 +87,11 @@ namespace Emojo.Droid.Fragments
                 imageView = (ImageView)convertView;
             }
 
-            var imageBitmap = BitmapHelpers.GetImageBitmapFromUrl(_source[position]);
+            var imageBitmap = BitmapHelpers.GetImageBitmapFromUrl(_source[position].LinkThumbnail);
             imageView.SetImageBitmap(imageBitmap);
 
             TextView emojo = new TextView(context);
-            emojo.Text = BitmapHelpers.SmileDic[(Emotions)new Random().Next(5)];
+            emojo.Text = Repository.SmileMaxOverall;
             emojo.TextSize = 12;
 
             return imageView;

@@ -58,6 +58,19 @@ namespace Emojo.Droid.Helpers
             }
         }
 
+        public string Text
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public void SetData(Dictionary<string, double> dataSet)
         {
             throw new NotImplementedException();

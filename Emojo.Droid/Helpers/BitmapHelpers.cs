@@ -17,20 +17,6 @@ namespace Emojo.Droid.Helpers
 {
     public static class BitmapHelpers
     {
-        private static Dictionary<Emotions, string> _smileDic = new Dictionary<Emotions, string>
-        {
-            {Emotions.Anger, "😡" },
-            {Emotions.Fear, "😱" },
-            {Emotions.Happiness, "😁" },
-            {Emotions.Sadness, "😳" },
-            {Emotions.Surprise, "😳" }
-        }; // 😡 😱 😁 😭 😳
-
-        public static Dictionary<Emotions, string> SmileDic
-        {
-            get { return _smileDic; }
-        }
-
         public static Bitmap LoadAndResizeBitmap(this string fileName, int width, int height)
         {
             // First we get the the dimensions of the file on disk

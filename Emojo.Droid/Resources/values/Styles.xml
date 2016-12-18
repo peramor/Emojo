@@ -24,9 +24,10 @@
 
   <style name="Theme.DesignDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-  <style name="MyTheme.Login" parent ="Theme.AppCompat.Light">
+  <style name="MyTheme.Login" parent ="Theme.DesignDemo">
     <item name="android:windowBackground">@drawable/bg</item>
     <item name="android:windowNoTitle">true</item>
+    <item name="colorPrimary">#DCDCDC</item>
     
   </style>
   

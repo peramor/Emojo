@@ -32,22 +32,6 @@ namespace Emojo.Droid
     public class MainActivity : AppCompatActivity
     {
         private DrawerLayout mDrawerLayout;
-        List<string> photoLinks = new List<string>() {
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/1530641_831063783599337_1611920088_n.jpg?ig_cache_key=OTA4NTExOTkxMTU3NTIwMDE5.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10601685_1452490401680454_1631356791_n.jpg?ig_cache_key=NzkwNjE0MDM3ODUyMzUzNzk3.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/12107612_775475549230876_87204900_n.jpg?ig_cache_key=MTEwODIxOTA3MDI2NzgxNDk0NA==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/12826150_867009390087732_1342751490_n.jpg?ig_cache_key=MTIwNDg0MzM1ODM1MjU3NzI4Mg==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/924987_190961084619412_19814228_n.jpg?ig_cache_key=MTIxNDYwMjQ5NTA1NTYzMDY0MQ==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/13117946_261828130831913_1628675311_n.jpg?ig_cache_key=MTIzOTI1OTk0MDMxOTEzNzk4MA==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/13151248_237514076605241_2139360198_n.jpg?ig_cache_key=MTI0NjY3ODc0MzMxOTU4MTY1Nw==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/13181501_1692961907634211_853381316_n.jpg?ig_cache_key=MTI1MzgyODk3MTg0ODAxMjU3Nw==.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10601685_1452490401680454_1631356791_n.jpg?ig_cache_key=NzkwNjE0MDM3ODUyMzUzNzk3.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/891457_546413035487528_1755091881_n.jpg?ig_cache_key=NzkwNjE0NTM1OTg0Njc0MDYy.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10831806_323697501170361_629419214_n.jpg?ig_cache_key=ODc3NjkzNzEwNTQ0OTU5MzIw.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/1530641_831063783599337_1611920088_n.jpg?ig_cache_key=OTA4NTExOTkxMTU3NTIwMDE5.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/11176379_720832298042528_2008360608_n.jpg?ig_cache_key=OTY3MTc5ODcwODYxODE3NDg3.2",
-            "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/11313543_380222042178029_1812153444_n.jpg?ig_cache_key=OTkxMjY2MDgzMzUyNjM5MDY0.2"
-        };
         private ImageView _imageView;
 
         protected override void OnCreate(Bundle bundle)
@@ -85,12 +69,15 @@ namespace Emojo.Droid
             {
                 View anchor = o as View;
 
-                Snackbar.Make(anchor, "20 PHOTOS", Snackbar.LengthLong)
+                Snackbar.Make(anchor, Repository.Photos.Count + " PHOTOS", Snackbar.LengthLong)
                     .SetAction(SnackbarActionName, SnackbarAction)
                     .Show();
             };
             #endregion
         }
+
+        public override void OnBackPressed()
+        { }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -169,7 +156,7 @@ namespace Emojo.Droid
             TabAdapter adapter = new TabAdapter(SupportFragmentManager);
             //adapter.AddFragment(new Fragment1(), "Collage");
             adapter.AddFragment(new FragmentEmotions(), "Emotions");
-            adapter.AddFragment(new FragmentMyPhoto(photoLinks), "My photos");
+            adapter.AddFragment(new FragmentMyPhoto(), "My photos");
 
             viewPager.Adapter = adapter;
         }

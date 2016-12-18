@@ -7,10 +7,18 @@ using Xamarin.Auth;
 using Android.Content.Res;
 using System.IO;
 using Android.Support.V7.App;
+using Emojo.Lib;
+using Newtonsoft.Json;
+using Emojo.Lib.ViewModels;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Emojo.Lib.EmotionAPI;
+using System.Collections.Generic;
+using Android.Content;
 
 namespace Emojo.Droid
 {
-    [Activity(Label = "Login", MainLauncher = true
+    [Activity(Label = "Emojo", MainLauncher = true
         , ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait
         , Theme = "@style/MyTheme.Login")]
     public class LoginActivity : AppCompatActivity
@@ -18,10 +26,11 @@ namespace Emojo.Droid
         private string client_id;
         private string client_secret;
         Button btnLogin;
+        TextView status;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            RequestWindowFeature(WindowFeatures.NoTitle);            
+            RequestWindowFeature(WindowFeatures.NoTitle);
 
             AssetManager assets = Assets;
             using (var sr = new StreamReader(assets.Open("credential.txt")))
@@ -29,13 +38,17 @@ namespace Emojo.Droid
                 client_id = sr.ReadLine();
                 client_secret = sr.ReadLine();
             }
-           
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Login);
 
             btnLogin = FindViewById<Button>(Resource.Id.buttonLogin);
+            status = FindViewById<TextView>(Resource.Id.textViewLogIn);
             btnLogin.Click += BtnLogin_Click;
         }
+
+        public override void OnBackPressed()
+        { }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -45,7 +58,7 @@ namespace Emojo.Droid
                                               , new Uri("https://api.instagram.com/oauth/authorize/")
                                               , new Uri($"https://emojo.azurewebsites.net/auth?client={client_id}&secret={client_secret}")
                                               , new Uri("https://api.instagram.com/oauth/access_token"));
-
+            auth.AllowCancel = true;
             auth.Completed += (s, eventArgs) =>
             {
                 if (eventArgs.IsAuthenticated)
@@ -53,11 +66,9 @@ namespace Emojo.Droid
                     btnLogin.Enabled = false;
 
                     var loggedInAccount = eventArgs.Account;
-                    AccountStore.Create(this).Save(loggedInAccount, "Instagram");
                     GoToMainActivity(loggedInAccount);
-                    if (eventArgs.IsAuthenticated) {
+                    if (eventArgs.IsAuthenticated)
                         auth = null;
-                    };
                 }
             };
 
@@ -67,31 +78,36 @@ namespace Emojo.Droid
 
         public async void GoToMainActivity(Xamarin.Auth.Account account)
         {
-            
-            //string access_token = account.Properties["access_token"];
-            //string userStr = account.Properties["user"];
-            //var user = JsonConvert.DeserializeObject<DTO.User>(userStr);
+            btnLogin.Text = "Loading";
 
-            //var photos = await getter.GetRecentPhotosRecognized(new OAuthBuildModel
-            //{
-            //    AccessToken = access_token,
-            //    FullName = user.FullName,
-            //    ProfilePicture = user.ProfilePicture,
-            //    Id = user.Id,
-            //    Username = user.UserName
-            //});
+            string access_token = account.Properties["access_token"];
+            string userStr = account.Properties["user"];
+            var userDTO = await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<DTO.User>(userStr));
+            var user = new User
+            {
+                FullName = userDTO.FullName,
+                ProfilePhoto = userDTO.ProfilePicture,
+                UserId = userDTO.Id,
+                UserName = userDTO.UserName
+            };
 
-            //Intent intent = new Intent(this, typeof(MainActivity));
+            Task task = new Task(() =>
+            {
+                Repository repo = new Repository(user, access_token
+                    ,  (yes, no, total) => 
+                    {
+                        RunOnUiThread(() =>
+                        {
+                            status.Text = $"{yes + no} ({yes}) / {total}";
+                        });
+                    });
+            });
 
-            //var thumbNailPhotos = photos.Select(p => p.LinkThumbnail).ToList();
-            //var thumbNailPhotosArr = new string[thumbNailPhotos.Count];
-            //for (int i = 0; i < thumbNailPhotosArr.Length; i++)
-            //{
-            //    thumbNailPhotosArr[i] = thumbNailPhotos[i];
-            //}
+            task.Start();
 
-            //intent.PutExtra("photos", thumbNailPhotosArr);
-            //StartActivity(intent);
+            await task.ContinueWith((t) => {
+                StartActivity(new Intent(this, typeof(MainActivity)));
+            });
         }
     }
 }

@@ -2392,7 +2392,7 @@ namespace Emojo.Droid
 			public const int textSpacerNoButtons = 2131099725;
 			
 			// aapt resource value: 0x7f060088
-			public const int textView1 = 2131099784;
+			public const int textViewLogIn = 2131099784;
 			
 			// aapt resource value: 0x7f060090
 			public const int time = 2131099792;

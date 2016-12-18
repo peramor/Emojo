@@ -21,6 +21,11 @@ namespace Emojo.Droid.Helpers
     {
         public PieChart Chart { get; set; }
         public int[] Colors { get; set; }
+        public string Text
+        {
+            get { return Text; }
+            set { Chart.CenterText = value; }
+        }
         public string Description {
             get { return Description; }
             set
@@ -38,6 +43,7 @@ namespace Emojo.Droid.Helpers
         {
             Chart = chart;
             Description = "";
+            Text = Repository.SmileMaxOverall;
 
             Colors = new int[]
             {
@@ -66,7 +72,6 @@ namespace Emojo.Droid.Helpers
         private void SetUpChart()
         {
             Chart.SetDrawCenterText(true);
-            Chart.CenterText = BitmapHelpers.SmileDic[(Emotions)new Random().Next(5)];
             Chart.SetCenterTextSize(40);
         }
     }
