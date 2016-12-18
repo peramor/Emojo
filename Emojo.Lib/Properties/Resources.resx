@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="APIKey" xml:space="preserve">
-    <value>41bb2944418b4e0d97cee44411b35261</value>
+    <value>4b929f89088547acb455273d73fe2184</value>
   </data>
   <data name="APISecret" xml:space="preserve">
-    <value>b9edde48cbe24132819414d1919d433c</value>
+    <value>c9f9379d17e54c39a441cc9fc9327a96</value>
   </data>
   <data name="AppId" xml:space="preserve">
     <value>qwertyuiop</value>
@@ -130,6 +130,6 @@
     <value>a0929f423c3f4c29af4d0271bd73a205</value>
   </data>
   <data name="RedirectURI" xml:space="preserve">
-    <value>http://localhost</value>
+    <value>https://emojo.azurewebsites.net/auth</value>
   </data>
 </root>

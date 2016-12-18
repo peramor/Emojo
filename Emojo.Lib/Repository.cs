@@ -14,6 +14,7 @@ namespace Emojo.Lib {
 
         public User User { get; set; }
         public List<Photo> Photos { get; set; }
+        public List<int> PeopleCounts { get; set; }
 
         public Repository(IInstagramGetter getter, IEmotionsAPIGetter emgetter) {
             while (getter.Token == null) {
@@ -51,6 +52,7 @@ namespace Emojo.Lib {
                     } catch { }
                 }
             }
+            PeopleCounts = await emgetter.GetFaceCounts(Photos);
         }
 
         public Dictionary<string, List<Emotions>> GetMaxByEmotion() {
