@@ -28,6 +28,7 @@ namespace Emojo.WPF
         {
             InitializeComponent();
             getter = InterfaceFactory.GetInstagramInterface();
+            
         }
 
         private void LoginButtonClicked(object sender, RoutedEventArgs e)
@@ -40,8 +41,26 @@ namespace Emojo.WPF
         private void LogOn() {
             var infoWindow = new FinalInfo(getter);
             infoWindow.Show();
-            infoWindow.Closed += (s, a) => Close();
+            infoWindow.Closed += CloseWindow;
+            infoWindow.OnLogout += LogOut;
             Hide();
+        }
+
+        private void LogOut(object sender) {
+            ((FinalInfo)sender).Closed -= CloseWindow;
+            ((FinalInfo)sender).Close();
+            var loginBrowser = new LoginBrowserWindow();
+            loginBrowser.Close();
+            Show();
+        }
+
+        private void CloseWindow(object sender, EventArgs e) {
+            Close();
+        }
+
+        protected override void OnClosed(EventArgs e) {
+            base.OnClosed(e);
+            Application.Current.Shutdown();
         }
 
     }

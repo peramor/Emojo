@@ -24,12 +24,16 @@ namespace Emojo.WPF
     /// </summary>
     public partial class FinalInfo : Window
     {
+        //😡 😱 😁 😭 😳
         public SeriesCollection Overall { get; set; }
         public SeriesCollection ChosenPicture { get; set; }
         public SeriesCollection Overall_People { get; set; }
         private Dictionary<Emotions, SolidColorBrush> colorsDict = new Dictionary<Emotions, SolidColorBrush>();
         private Repository repository;
         private ImageDownloader downloader;
+
+        public delegate void Logout(object sender);
+        public event Logout OnLogout;
 
         public FinalInfo(IInstagramGetter getter)
         {
@@ -45,7 +49,7 @@ namespace Emojo.WPF
 
             ProfilePic.Fill = new ImageBrush(new BitmapImage(new Uri(repository.User.ProfilePhoto)));
             UserName.Text = repository.User.UserName;
-
+            FullName.Text = repository.User.FullName;
             
             ChosenPicture = new SeriesCollection
             {
@@ -218,15 +222,22 @@ namespace Emojo.WPF
 
             };
 
-
+            
             chartOverall.Visibility = Visibility.Visible;
             chartOverallPeople.Visibility = Visibility.Visible;
             chartChosenPicture.Visibility = Visibility.Visible;
+            OverallInfoTextBox.Visibility = Visibility.Visible;
+            ChooseToAnalyzeTextBox.Visibility = Visibility.Visible;
+            label.Visibility = Visibility.Visible;
             await ChoosePicture(repository.Photos.First());
             DataContext = null;
             DataContext = this;
             textBlockLoading.Visibility = Visibility.Hidden;
 
+        }
+
+        public void Logout_Clicked (object sender, EventArgs e) {
+            OnLogout(this);
         }
     }
 }

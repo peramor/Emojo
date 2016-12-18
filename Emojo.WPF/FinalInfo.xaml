@@ -28,7 +28,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-
+        <Label x:Name="label"  HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="2" FontSize="28" Margin="190 15 0 15"
+               Content="Logout" Foreground="#FF4D625C" Visibility="Visible" Cursor="Hand" 
+               FontFamily="MV Boli" MouseLeftButtonDown="Logout_Clicked" />
+        <TextBlock x:Name="FullName"  FontWeight="Light" FontSize="16" Foreground="#FF4D625C" Text="" Grid.Column="0" Grid.ColumnSpan="2" Margin="100 50 0 0"/>
         <StackPanel Orientation="Horizontal">
             <Ellipse Name="ProfilePic" Stretch="Uniform" Width="80" Margin="10,10,0,0" HorizontalAlignment="Left">
                 <Ellipse.Fill>
@@ -36,7 +39,9 @@
                 </Ellipse.Fill>
 
             </Ellipse>
-            <TextBlock x:Name="UserName" Margin="10 20 " FontWeight="Bold" FontSize="18" Foreground="#FF5EB79F" Text="" />
+            <TextBlock x:Name="UserName" Margin="10,20,10,45" FontWeight="Bold" FontSize="18" Foreground="#FF5EB79F" Text="" Width="150" />
+            
+            
 
 
         </StackPanel>
@@ -44,10 +49,10 @@
 
 
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Margin="122,0,121,0" Foreground="#FF1D9974" >Overall Info</TextBlock>
+            <TextBlock Name="OverallInfoTextBox" Visibility="Hidden" HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Margin="122,0,121,0" Foreground="#FF1D9974" >Overall Info</TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3">
-            <TextBlock HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FF1D9974" >Choose a picture to analyze</TextBlock>
+            <TextBlock Name="ChooseToAnalyzeTextBox" Visibility="Hidden" HorizontalAlignment="Center" FontSize="18" VerticalAlignment="Bottom" Height="35" Foreground="#FF1D9974" >Choose a picture to analyze</TextBlock>
         </StackPanel>
 
         <lvc:PieChart x:Name="chartOverall" Grid.Row="2" Grid.Column="2" LegendLocation="Bottom" InnerRadius="30" Margin="10 5 10 20" Series="{Binding Overall}" Visibility="Hidden">

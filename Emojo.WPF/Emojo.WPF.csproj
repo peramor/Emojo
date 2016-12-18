@@ -138,5 +138,8 @@
   <ItemGroup>
     <Resource Include="5243641910_e30e0171b2_oem.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Instagram_App_Large_May2016_200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

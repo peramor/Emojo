@@ -31,6 +31,11 @@ namespace Emojo.WPF {
 
         }
 
+        public LoginBrowserWindow() {
+            InitializeComponent();
+            browser.Navigate("http://instagram.com/accounts/logout");
+        }
+
 
         private async void browser_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e) {
             var url = e.Uri.Query;
