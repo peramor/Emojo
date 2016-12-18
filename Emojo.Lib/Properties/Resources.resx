@@ -127,7 +127,7 @@
     <value>qwertyuiop</value>
   </data>
   <data name="EmotionSubscriptionKey" xml:space="preserve">
-    <value>a0929f423c3f4c29af4d0271bd73a205</value>
+    <value>4ee4a73e99744ed7a9b4c39b4e2d3bc9</value>
   </data>
   <data name="RedirectURI" xml:space="preserve">
     <value>https://emojo.azurewebsites.net/auth</value>

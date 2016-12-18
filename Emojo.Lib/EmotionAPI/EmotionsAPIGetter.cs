@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ProjectOxford.Emotion;
+using Emojo.Lib.Models;
 
 namespace Emojo.Lib.EmotionAPI {
     public class EmotionsAPIGetter : IEmotionsAPIGetter {
@@ -41,7 +42,7 @@ namespace Emojo.Lib.EmotionAPI {
             };
         }
 
-        public async Task<Photo> GetEmotionRatings (APIModels.InstagramPhoto photo) {
+        public async Task<Photo> GetEmotionRatings (InstagramPhoto photo) {
             var emotions = await recognizer.RecognizeAsync(photo.LinkStandard);
             if (emotions.Length == 0) {
                 throw new ArgumentException("There are no faces on the photo, unable to recognize");
@@ -71,7 +72,7 @@ namespace Emojo.Lib.EmotionAPI {
             return finalPhoto;
         }
 
-        public async Task<List<int>> GetFaceCounts(List<APIModels.InstagramPhoto> photos) {
+        public async Task<List<int>> GetFaceCounts(List<InstagramPhoto> photos) {
             int countWithout = 0;
             int countAlone = 0;
             int countMany = 0;

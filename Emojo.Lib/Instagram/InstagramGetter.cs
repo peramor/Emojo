@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using InstaSharp;
 using System.Diagnostics;
 using Emojo.Lib.ViewModels;
+using Emojo.Lib.Models;
 
 namespace Emojo.Lib.Instagram {
     public class InstagramGetter : IInstagramGetter {
@@ -68,13 +69,13 @@ namespace Emojo.Lib.Instagram {
             };
         }
 
-        public async Task<List<APIModels.InstagramPhoto>> GetRecentMedia() {
+        public async Task<List<InstagramPhoto>> GetRecentMedia() {
             var userInfo = new InstaSharp.Endpoints.Users(config, token);
             var user = await GetUser();
             var mediaInfo = await userInfo.RecentSelf();
             return (from m in mediaInfo.Data
                     where m.Type == "image"
-                    select new APIModels.InstagramPhoto {
+                    select new InstagramPhoto {
                         PhotoId = m.Id,
                         LinkStandard = m.Images.StandardResolution.Url,
                         LinkLow = m.Images.LowResolution.Url,

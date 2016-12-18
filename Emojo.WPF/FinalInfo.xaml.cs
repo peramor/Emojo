@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Wpf;
 using LiveCharts.Defaults;
@@ -24,7 +19,6 @@ namespace Emojo.WPF
     /// </summary>
     public partial class FinalInfo : Window
     {
-        //😡 😱 😁 😭 😳
         public SeriesCollection Overall { get; set; }
         public SeriesCollection ChosenPicture { get; set; }
         public SeriesCollection Overall_People { get; set; }

@@ -88,7 +88,7 @@ namespace Emojo.Lib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a0929f423c3f4c29af4d0271bd73a205.
+        ///   Looks up a localized string similar to 4ee4a73e99744ed7a9b4c39b4e2d3bc9.
         /// </summary>
         internal static string EmotionSubscriptionKey {
             get {
